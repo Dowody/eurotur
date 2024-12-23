@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
 * {
     box-sizing: border-box;
     padding: 0;
@@ -10,10 +8,6 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: linear-gradient(0deg, #4A6FA5 20%, #474DAF 100%);
-}
-body {
-    background: linear-gradient(0deg, #4A6FA5 20%, #474DAF 100%);
 }
 :root {
     --bg-color-1: #4A6FA5;
@@ -23,7 +17,56 @@ body {
 }
 
 #nav {
-    height: 200px;
+    height: 70px;
     width: 100%;
-    background: blue;
+    background: linear-gradient(0deg, #4A6FA5 40%, #474DAF 150%);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: "Inter", sans-serif;
+    padding: 0 40px;
+}
+
+.phone {
+    font-weight: 600;
+    display: flex;
+    font-size: 18px;
+}
+#nav a {
+    text-decoration: none;
+    color: white;
+}
+.phone img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.social img {
+    width: 40px;
+    padding: 0 5px;
+}
+
+#logo-header {
+    background: white;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px 0 30px;
+}
+
+#logo-header img {
+    height: 100px;
+
+}
+#logo-header button {
+    background: none;
+    outline: none;
+    border: none;
+}
+#logo-header button img {
+    height: 40px;
 }
