@@ -70,7 +70,7 @@ html, body {
 }
 #logo-header button img {
     height: 30px;
-    width: 35px;
+    width: 40px;
 }
 
 #banner {
@@ -78,4 +78,11 @@ html, body {
     height: 600px;
     background: linear-gradient(145deg, var(--bg-color-1) 40%, 
     var(--bg-color-2) 300%);
+}
+
+.shape img {
+    color: black;
+    width: 140%;
+    position: relative;
+    bottom: 120px;
 }
