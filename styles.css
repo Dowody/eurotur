@@ -9,15 +9,11 @@
 html, body {
     height: 100%;
     margin: 0;
+    background: linear-gradient(0deg, #4A6FA5 20%, #474DAF 100%);
 }
 :root {
     --bg-color-1: #4A6FA5;
     --bg-color-2: #474DAF;
     --shape-color: #E4E7FF;
     --body-color: #FCFBF4;
-}
-
-
-body {
-    background: linear-gradient(0deg, #4A6FA5 20%, #474DAF 100%);
 }
