@@ -25,7 +25,8 @@ html, body {
     justify-content: space-between;
     align-items: center;
     color: white;
-    font-family: "Inter", sans-serif;
+    font-family: "Manrope", sans-serif;
+    font-weight: 600;
     padding: 0 30px;
 }
 
@@ -72,3 +73,9 @@ html, body {
     width: 35px;
 }
 
+#banner {
+    width: 100%;
+    height: 600px;
+    background: linear-gradient(145deg, var(--bg-color-1) 40%, 
+    var(--bg-color-2) 300%);
+}
