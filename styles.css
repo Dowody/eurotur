@@ -19,32 +19,34 @@ html, body {
 #nav {
     height: 70px;
     width: 100%;
-    background: linear-gradient(0deg, #4A6FA5 40%, #474DAF 150%);
+    background: linear-gradient(0deg, var(--bg-color-1) 40%, var(--bg-color-2) 200%);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: white;
     font-family: "Inter", sans-serif;
-    padding: 0 40px;
+    padding: 0 30px;
 }
 
 .phone {
-    font-weight: 600;
     display: flex;
-    font-size: 18px;
+    font-size: 16px;
+    justify-content: center;
+    align-items: center;
 }
 #nav a {
     text-decoration: none;
     color: white;
 }
 .phone img {
-    width: 20px;
+    height: 18px;
+    width: 18px;
     margin-right: 10px;
 }
 
 .social img {
-    width: 40px;
+    width: 35px;
     padding: 0 5px;
 }
 
@@ -55,12 +57,10 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 40px 0 30px;
+    padding: 0 35px 0 15px;
 }
-
 #logo-header img {
     height: 100px;
-
 }
 #logo-header button {
     background: none;
@@ -68,5 +68,7 @@ html, body {
     border: none;
 }
 #logo-header button img {
-    height: 40px;
+    height: 30px;
+    width: 35px;
 }
+
