@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@200..800&display=swap');
 
 * {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 html, body {
     height: 100%;
     margin: 0;
+    padding: 0;
     background: linear-gradient(0deg, #4A6FA5 20%, #474DAF 100%);
 }
 :root {
@@ -16,4 +16,10 @@ html, body {
     --bg-color-2: #474DAF;
     --shape-color: #E4E7FF;
     --body-color: #FCFBF4;
+}
+
+#nav {
+    height: 200px;
+    width: 100%;
+    background: blue;
 }
