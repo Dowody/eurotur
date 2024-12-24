@@ -33,17 +33,19 @@ html, body {
     top: 0;  
     left: 0;  
     transition: transform 0.3s ease-in;
-    z-index: 100090;
 }
 .hidden {
     transform: translateY(calc(-1 * 300px));
-    z-index: 9999999999;
     transition: transform 0.3s ease-in; 
 }
 
 .top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     transition: transform 0.3s ease-in;
-    z-index: 9999999999;
+    z-index: 999;
 }
 
 .phone {
@@ -87,7 +89,6 @@ html, body {
     position: fixed;  
     top: 55px; 
     left: 0;  
-    z-index: 999;
 }
 #logo-header img {
     height: 100px;
@@ -122,10 +123,9 @@ html, body {
     color: white;
     font-family: 'Bebas Neue';
     overflow: hidden;
-    
 }
 
-#banner h1{
+#banner h1 {
     font-weight: 400;
     padding-top: 30px;
     font-size: 70px;
@@ -139,7 +139,6 @@ html, body {
     -webkit-text-fill-color: transparent;
     text-shadow: 4px 4px 16px rgba(0,0,0,0.05);
     font-weight: 400;
-    
 }
 #banner .flags {
     display: flex;
@@ -148,7 +147,6 @@ html, body {
 #banner .flags h5 {
     font-size: 50px;
     padding: 0 10px 0 0;
-    
 }
 #banner button img {
     width: 22px;    
@@ -188,6 +186,7 @@ button
     box-shadow: 10px 10px 47px -17px rgba(0,0,0,0.66);
     -webkit-box-shadow: 10px 10px 47px -17px rgba(0,0,0,0.66);
     -moz-box-shadow: 10px 10px 47px -17px rgba(0,0,0,0.66);
+
 }
 .shape img {
     width: 100%;
