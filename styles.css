@@ -16,6 +16,68 @@ html, body {
     --body-color: #FCFBF4;
 }
 
+
+
+.loader-container {
+    width: 100%;
+    height: 100vh;
+    background-color: white; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+}
+
+@keyframes loader-container-hidden  {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.loader-container.hidden {
+    animation: 1s loader-container-hidden forwards;
+}
+
+.loader {
+    font-size: 40px;
+    font-family: system-ui, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px #000;
+    text-align: center;
+    background:
+        radial-gradient(0.71em at 50% 1em, #000 99%, transparent 101%) calc(50% - 1em) 1em/2em 200% repeat-x text,
+        radial-gradient(0.71em at 50% -0.5em, transparent 99%, #000 101%) 50% 1.5em/2em 200% repeat-x text;
+    animation:
+        l10-0 0.8s linear infinite alternate,
+        l10-1 4s linear infinite;
+    z-index: 99999;
+}
+
+.loader:before {
+    content: "EuroTur";
+}
+
+@keyframes l10-0 {
+    to {
+        background-position-x: 50%, calc(50% + 1em);
+    }
+}
+
+@keyframes l10-1 {
+    to {
+        background-position-y: -0.5em, 0;
+    }
+}
+
+  
 @keyframes nav-appear {
     0% {
         opacity: 0;
@@ -26,7 +88,6 @@ html, body {
         transform: translateY(0px);
     }
 }
-
 #nav {
     height: 55px;
     width: 100%;
@@ -90,7 +151,16 @@ html, body {
     width: 45px;
     padding: 0 10px;
 }
-
+#scroll-status-bar {
+    height: 5px;
+    background: linear-gradient(45deg, #FFBF00 0%, #ffd453 100%);
+    position: fixed;
+    top: 130px; 
+    left: 0;
+    width: 0;
+    z-index: 9999;
+    transition: width 0.1s ease;
+}
 #logo-header {
     background: white;
     height: 80px;

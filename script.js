@@ -20,3 +20,21 @@ window.addEventListener('scroll', function() {
     const rotation = window.scrollY * 0.1;
     polygon.style.transform = `rotate(${rotation}deg)`;
 });
+
+window.onscroll = function() {
+    let docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    let scrollPosition = document.documentElement.scrollTop;
+    let scrollPercentage = (scrollPosition / docHeight) * 100;
+    document.getElementById('scroll-status-bar').style.width = scrollPercentage + '%';
+};
+
+window.onload = function() {
+    document.body.style.overflow = 'hidden';
+
+    setTimeout(function() {
+        const loader = document.querySelector('.loader-container');
+        loader.classList.add("hidden");
+        document.body.style.overflow = 'auto';
+    }, 4000); 
+
+};
