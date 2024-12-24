@@ -16,6 +16,16 @@ html, body {
     --body-color: #FCFBF4;
 }
 
+@keyframes nav-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 100;
+        transform: translateY(0px);
+    }
+}
 
 #nav {
     height: 55px;
@@ -54,6 +64,7 @@ html, body {
     font-size: 16px;
     justify-content: center;
     align-items: center;
+    animation: 1s nav-appear cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 #nav a {
     text-decoration: none;
@@ -73,6 +84,7 @@ html, body {
     align-items: center;
     position: relative;
     top: 2px;
+    animation: 1s nav-appear cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 #nav .social img {
     width: 45px;
@@ -94,7 +106,17 @@ html, body {
     -moz-box-shadow: 0px 10px 10px -7px rgba(0,0,0,0.1);
     box-shadow: 0px 10px 10px -7px rgba(0,0,0,0.1);
 }
-#logo-header img {
+@keyframes logo-header-img {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+#logo-header img.logo {
     height: 100px;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -103,6 +125,17 @@ html, body {
     position: relative;
     top: 5px;
 
+    animation: 1s logo-header-img cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+@keyframes logo-header-button {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
 #logo-header button {
     background: none;
@@ -110,8 +143,7 @@ html, body {
     border: none;
     box-shadow: none;
     padding: initial;
-    position: relative;
-    bottom: 5px;
+    animation: 1s logo-header-button cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 #logo-header button img {
     height: 30px;
@@ -128,6 +160,20 @@ html, body {
     color: white;
     font-family: 'Bebas Neue';
     overflow: hidden;
+}
+
+@keyframes banner-container {
+    0% {
+        opacity: 0;
+        transform: translateX(-400px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+#banner .content {
+    animation: banner-container 2s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 #banner h1 {
@@ -158,17 +204,33 @@ html, body {
 #banner a {
     text-decoration: none;
 }
+
+@keyframes polygon-appear {
+    0% {
+        opacity: 0;
+        transform: rotate(-45deg); 
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(0deg); 
+    }
+}
+
 .polygon-container {
     position: absolute;
     top: 0px;
-    left: 50px;
+    left: 100px;
     width: 100%; 
     height: 100%; 
 }
 
 .polygon {
-    width: 160%; 
+    width: 140%; 
     height: auto; 
+    animation: polygon-appear 2s ;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 #button {
@@ -199,6 +261,8 @@ html, body {
 #button img {
     width: 22px;
     margin-right: 10px;
+    position: relative;
+    top: 2px;
 }
 
 .shape img {

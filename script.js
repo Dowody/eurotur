@@ -13,3 +13,10 @@ window.addEventListener("scroll", () => {
     }
     lastScrollY = window.scrollY;
 });
+
+const polygon = document.querySelector('.polygon');
+
+window.addEventListener('scroll', function() {
+    const rotation = window.scrollY * 0.1;
+    polygon.style.transform = `rotate(${rotation}deg)`;
+});
