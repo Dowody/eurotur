@@ -153,6 +153,9 @@ html, body {
     position: relative;
     bottom: 2px;
 }
+#banner a {
+    text-decoration: none;
+}
 .polygon-container {
     position: absolute;
     top: 0px;
