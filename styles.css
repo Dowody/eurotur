@@ -194,10 +194,10 @@ html, body {
 }
 #banner .flags {
     display: flex;
-    margin: 8px 0;
+    margin: 5px 0;
 }
 #banner .flags h5 {
-    font-size: 50px;
+    font-size: 40px;
     padding: 0 10px 0 0;
 }
 
@@ -234,6 +234,7 @@ html, body {
 }
 
 #button {
+    margin-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
