@@ -189,6 +189,7 @@ html, body {
     width: 60%;
     cursor: pointer;
     position: relative;
+    transition: .3s ease;
 }
 
 #button:hover {
