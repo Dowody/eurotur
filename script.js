@@ -29,12 +29,8 @@ window.onscroll = function() {
 };
 
 window.onload = function() {
-    document.body.style.overflow = 'hidden';
-
     setTimeout(function() {
         const loader = document.querySelector('.loader-container');
         loader.classList.add("hidden");
-        document.body.style.overflow = 'auto';
     }, 4000); 
-
 };
