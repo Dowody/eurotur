@@ -27,10 +27,3 @@ window.onscroll = function() {
     let scrollPercentage = (scrollPosition / docHeight) * 100;
     document.getElementById('scroll-status-bar').style.width = scrollPercentage + '%';
 };
-
-window.onload = function() {
-    setTimeout(function() {
-        const loader = document.querySelector('.loader-container');
-        loader.classList.add("hidden");
-    }, 4000); 
-};

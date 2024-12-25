@@ -5,9 +5,10 @@
     margin: 0;
 }
 html, body {
-    height: 180%;
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: 'Bebas Neue';
 }
 :root {
     --bg-color-1: #6596de;
@@ -16,42 +17,6 @@ html, body {
     --body-color: #FCFBF4;
 }
 
-
-.loader-container {
-    width: 100%;
-    height: 100vh;
-    background-color: white; 
-    position: absolute;
-    top: 0px;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 999999;
-}
-
-@keyframes loader-container-hidden {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
-}
-
-.loader-container.hidden {
-    animation: 1s loader-container-hidden forwards;
-}
-
-.loader {
-    width: 100px;
-    height: 100px;
-    background: url('data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20200%20200%22%3E%3Ccircle%20fill%3D%22%23FF156D%22%20stroke%3D%22%23FF156D%22%20stroke-width%3D%2215%22%20r%3D%2215%22%20cx%3D%2240%22%20cy%3D%2265%22%3E%3Canimate%20attributeName%3D%22cy%22%20calcMode%3D%22spline%22%20dur%3D%222%22%20values%3D%2265%3B135%3B65%22%20keySplines%3D%22.5%200%20.5%201%3B.5%200%20.5%201%22%20repeatCount%3D%22indefinite%22%20begin%3D%22-0.4s%22%3E%3C%2Fanimate%3E%3C%2Fcircle%3E%3Ccircle%20fill%3D%22%23FF156D%22%20stroke%3D%22%23FF156D%22%20stroke-width%3D%2215%22%20r%3D%2215%22%20cx%3D%22100%22%20cy%3D%2265%22%3E%3Canimate%20attributeName%3D%22cy%22%20calcMode%3D%22spline%22%20dur%3D%222%22%20values%3D%2265%3B135%3B65%22%20keySplines%3D%22.5%200%20.5%201%3B.5%200%20.5%201%22%20repeatCount%3D%22indefinite%22%20begin%3D%22-0.2s%22%3E%3C%2Fanimate%3E%3C%2Fcircle%3E%3Ccircle%20fill%3D%22%23FF156D%22%20stroke%3D%22%23FF156D%22%20stroke-width%3D%2215%22%20r%3D%2215%22%20cx%3D%22160%22%20cy%3D%2265%22%3E%3Canimate%20attributeName%3D%22cy%22%20calcMode%3D%22spline%22%20dur%3D%222%22%20values%3D%2265%3B135%3B65%22%20keySplines%3D%22.5%200%20.5%201%3B.5%200%20.5%201%22%20repeatCount%3D%22indefinite%22%20begin%3D%220s%22%3E%3C%2Fanimate%3E%3C%2Fcircle%3E%3C%2Fsvg%3E') center center no-repeat;
-    background-size: contain;
-    width: 100px;
-    height: 100px;
-}
-  
 @keyframes nav-appear {
     0% {
         opacity: 0;
@@ -312,7 +277,52 @@ html, body {
 
 .shape img {
     width: 100%;
+}
+.shape {
     position: relative;
     bottom: 200px;
 }
 
+
+/* DESTINATIONS */
+
+
+#destinations {
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    bottom: 325px;
+}
+@keyframes title-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+#destinations .title {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    animation: title-appear 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+    opacity: 0;
+    animation-delay: 2s;
+}
+
+#destinations .title h1 {
+    font-weight: 200;
+    font-size: 30px;
+}
+
+#destinations .title span {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
