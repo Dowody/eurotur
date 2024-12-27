@@ -340,7 +340,7 @@ html, body {
     margin: 15px 0;
     display: flex;
     justify-content: center;
-    box-shadow: 0px 10px 10px -7px rgba(0, 0, 0, 0.1);
+
 
     -webkit-box-shadow: 5px 15px 51px -11px rgba(0,0,0,0.35);
     -moz-box-shadow: 5px 15px 51px -11px rgba(0,0,0,0.35);
@@ -351,7 +351,7 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 95%;
+    height: 97%;
     border-radius: 18px;
     background-color: white;
     overflow: hidden;
@@ -402,8 +402,18 @@ html, body {
     background-color: black;
 }
 
+[class*="reveal-item"] {
+    opacity: 0;
+    transform: translateY(200px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
 
-.card.reveal-item {
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card.reveal-card {
     opacity: 1;
     transform: translateY(0);
 }
@@ -414,4 +424,127 @@ html, body {
     transition: opacity 0.5s ease, transform 0.5s ease;
     
     margin: 20px 0;
+}
+
+.shape2 {
+    transform: scaleX(-1);
+    z-index: 99;
+    bottom: 275px;
+}
+
+.numbers {
+    width: 100%;
+    height: 1100px;
+    background: linear-gradient(45deg, var(--bg-color-2) 0%, 
+    var(--bg-color-1) 100%);
+    padding: 125px 25px 0 25px;
+    color: white;
+    font-family: 'Bebas Neue';
+    overflow: hidden;
+    position: relative;
+    bottom: 500px;
+}
+
+.numbers .polygon-container {
+    top: 250px;
+    left: -250px;
+    width: 110%; 
+}
+
+.numbers .polygon {
+    animation: none;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);}
+.numbers .title h1 {
+    font-weight: 400;
+    padding-top: 50px;
+    font-size: 70px;
+    text-shadow: 4px 4px 16px rgba(0,0,0,0.3);
+    line-height: 76px;
+    width: 80%;
+}
+.numbers .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 25px;
+}
+.numbers .content .box {
+    padding-top: 50px;
+}
+.numbers .content .box h2 {
+    font-size: 50px;
+    font-weight: 300;
+}
+
+.numbers .content .box p {
+    font-family: 'Manrope';
+    font-size: 17px;
+}
+.numbers .images img {
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 190px;
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.50));
+}
+
+.numbers .images .bus1 {
+    top: 750px;
+    left: -50px;
+    transform: rotate(5deg);
+}
+.numbers .images .bus2 {
+    top: 250px;
+    left: 275px;
+    transform: rotate(-10deg);
+}
+.numbers .images .boxx1 {
+    width: 130px;
+    height: 125px;
+    top: 445px;
+    left: -35px;
+    transform: scaleX(-1) rotate(-20deg);
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.20));
+}
+.numbers .images .boxx2 {
+    width: 130px;
+    height: 125px;
+    top: 605px;
+    left: 315px;
+    transform: scaleX(-1) rotate(20deg);
+    filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.20));
+}
+
+.shape3 {
+    transform: scaleX(1);
+    z-index: 99;
+    bottom: 675px;
+}
+
+
+
+
+@media screen and (max-width: 410px){
+    #button {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 65%;
+    }
+    
+}
+
+@media screen and (max-width: 380px){
+    #button {
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+    }
+    
 }

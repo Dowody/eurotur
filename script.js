@@ -14,11 +14,14 @@ window.addEventListener("scroll", () => {
     lastScrollY = window.scrollY;
 });
 
-const polygon = document.querySelector('.polygon');
+// POLYGON
+const polygons = document.querySelectorAll('.polygon');
 
 window.addEventListener('scroll', function() {
     const rotation = window.scrollY * 0.1;
-    polygon.style.transform = `rotate(${rotation}deg)`;
+    polygons.forEach(polygon => {
+        polygon.style.transform = `rotate(${rotation}deg)`;
+    });
 });
 
 window.onscroll = function() {
@@ -69,12 +72,75 @@ function revealOnScroll() {
     const cards = document.querySelectorAll('.card');
     cards.forEach(card => {
         if (isInViewport(card)) {
-            card.classList.add('reveal-item');
+            card.classList.add('reveal-card');
         } else {
-            card.classList.remove('reveal-item');
+            card.classList.remove('reveal-card');
         }
     });
 }
 
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
+
+
+
+function isInViewport2(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+}
+
+function revealOnScroll2() {
+    const revealItems = document.querySelectorAll('[class*="reveal-item"]'); // Select all elements with 'reveal-item' in their class name
+    revealItems.forEach(item => {
+        if (isInViewport2(item) && !item.classList.contains('reveal')) {  // Add 'reveal' only if not already revealed
+            item.classList.add('reveal');
+        }
+    });
+}
+
+window.addEventListener('scroll', revealOnScroll2);
+window.addEventListener('load', revealOnScroll2);
+window.addEventListener('load', revealOnScroll2);
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const countUpElements = document.querySelectorAll('.countup');
+
+    // Function to animate the number count-up with a plus sign
+    function countUp(element) {
+        const target = +element.getAttribute('data-target'); // Get target number from data attribute
+        let current = 0; // Start count from 0
+        const increment = target / 100; // Adjust increment based on the target (faster for larger numbers)
+
+        function animateCount() {
+            if (current < target) {
+                current += increment;
+                element.textContent = `+${Math.floor(current)}`; // Add "+" sign before the number
+                requestAnimationFrame(animateCount); // Call the next frame for the animation
+            } else {
+                element.textContent = `+${target}`; // Ensure it reaches the final value with "+" sign
+            }
+        }
+
+        animateCount(); // Start the animation
+    }
+
+    // Set up the intersection observer to detect when the number is in view
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const element = entry.target;
+                countUp(element); // Trigger the count-up animation when the element comes into view
+                observer.unobserve(element); // Stop observing the element once the animation starts
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the element is in view
+    });
+
+    // Observe each count-up element
+    countUpElements.forEach(element => {
+        observer.observe(element);
+    });
+});
