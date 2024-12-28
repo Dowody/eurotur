@@ -7,6 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="hot-offers">
+        <a href="#offers">
+            <button><span>🔥</span> Oferte Fierbinți</button>
+        </a>
+    </div>
     <!-- Nav -->
     <section id="nav">
         <div class="phone">
@@ -182,11 +187,38 @@
     </section>
 
     <div class="shape shape3">
-        <img src="icons/shape-1.png" alt="">
+        <img src="icons/shape-3.png" alt=""> 
     </div>
 
-    <script src="script.js"></script>
+    <section id="offers">
+        <div class="title">
+            <span>📦🔥</span>
+            <h1>Oferte Fierbinți</h1>
+        </div>
+        <div class="slideshow">
+            <div class="slides">
+                <div class="slide">
+                    <img src="/icons/offers/IMG_5825.PNG" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/icons/offers/IMG_5826.PNG" alt="">
+                </div>
+                <div class="slide">
+                    <img src="/icons/offers/IMG_5827.PNG" alt="">
+                </div>
+                <button class="arrow left-arrow" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="arrow right-arrow" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </div>
+    </section>
 
-    
+    <div class="shape shape4">
+        <img src="icons/shape-4.png" alt=""> 
+    </div>
+
+
+
+
+    <script src="script.js"></script>
 </body>
 </html>
