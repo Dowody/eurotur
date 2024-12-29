@@ -146,54 +146,198 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-// OFFERS SLIDESHOW
-let currentSlide = 0;
-let direction = 1;
-const slides = document.querySelectorAll('.slide');
-
-function changeSlide() {
+// OFFERS
+document.addEventListener('DOMContentLoaded', () => {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
     const totalSlides = slides.length;
-    const exitingSlide = slides[currentSlide];
-    currentSlide += direction;
+    let autoSlideDirectionOffers = 1; // Direction for the offers slider
+    let autoSlideIntervalOffers;
 
-    if (currentSlide === totalSlides) {
-        currentSlide = totalSlides - 2;
-        direction = -1;
-    } else if (currentSlide < 0) {
-        currentSlide = 1;
-        direction = 1;
+    function changeSlideOffers(direction) {
+        // Prevent change if we're already at the start or the end
+        if (direction === -1 && currentSlide === 0) return; // If we're at the first slide and trying to go left
+        if (direction === 1 && currentSlide === totalSlides - 1) return; // If we're at the last slide and trying to go right
+
+        const newSlideIndex = (currentSlide + direction + totalSlides) % totalSlides;
+        if (newSlideIndex === currentSlide) return;
+
+        const exitingSlide = slides[currentSlide];
+        currentSlide = newSlideIndex;
+        const enteringSlide = slides[currentSlide];
+
+        exitingSlide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease';
+        exitingSlide.style.transform = direction > 0 ? 'translateX(-105%)' : 'translateX(105%)';
+        exitingSlide.style.opacity = '1';
+
+        enteringSlide.style.transition = 'none';
+        enteringSlide.style.transform = direction > 0 ? 'translateX(105%)' : 'translateX(-105%)';
+        enteringSlide.style.opacity = '1';
+
+        requestAnimationFrame(() => {
+            enteringSlide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease';
+            enteringSlide.style.transform = 'translateX(0)';
+            enteringSlide.style.opacity = '1';
+        });
     }
 
-    const enteringSlide = slides[currentSlide];
-
-    exitingSlide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease';
-    exitingSlide.style.transform = direction > 0 ? 'translateX(-100%)' : 'translateX(100%)';
-    exitingSlide.style.opacity = '0';
-
-    enteringSlide.style.transition = 'none';
-    enteringSlide.style.transform = direction > 0 ? 'translateX(100%)' : 'translateX(-100%)';
-    enteringSlide.style.opacity = '0';
-
-    requestAnimationFrame(() => {
-        enteringSlide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease';
-        enteringSlide.style.transform = 'translateX(0)';
-        enteringSlide.style.opacity = '1';
+    slides.forEach((slide, index) => {
+        slide.style.position = 'absolute';
+        slide.style.top = '0';
+        slide.style.left = '0';
+        slide.style.width = '100%';
+        slide.style.height = '100%';
+        slide.style.transform = index === 0 ? 'translateX(0)' : 'translateX(105%)';
+        slide.style.opacity = index === 0 ? '1' : '1';
     });
 
-    setTimeout(() => {
-        exitingSlide.style.transition = 'none';
-    }, 800);
-}
+    function startAutoSlideOffers() {
+        autoSlideIntervalOffers = setInterval(() => {
+            changeSlideOffers(autoSlideDirectionOffers);
 
-slides.forEach((slide, index) => {
-    slide.style.position = 'absolute';
-    slide.style.top = '0';
-    slide.style.left = '0';
-    slide.style.width = '100%';
-    slide.style.height = '100%';
-    slide.style.transform = index === 0 ? 'translateX(0)' : 'translateX(100%)';
-    slide.style.opacity = index === 0 ? '1' : '0';
+            if (currentSlide === 0 || currentSlide === totalSlides - 1) {
+                autoSlideDirectionOffers = -autoSlideDirectionOffers; // Reverse direction at ends
+            }
+        }, 6000);
+    }
+
+    function resetAutoSlideOffers() {
+        clearInterval(autoSlideIntervalOffers);
+        startAutoSlideOffers();
+    }
+
+    startAutoSlideOffers();
+
+    let startXOffers = 0;
+    let currentXOffers = 0;
+    let isDraggingOffers = false;
+    const sliderContainerOffers = document.querySelector('.slideshow');
+
+    sliderContainerOffers.addEventListener('touchstart', (e) => {
+        startXOffers = e.touches[0].clientX;
+        isDraggingOffers = true;
+    });
+
+    sliderContainerOffers.addEventListener('touchmove', (e) => {
+        if (!isDraggingOffers) return;
+        currentXOffers = e.touches[0].clientX;
+        const deltaX = Math.abs(currentXOffers - startXOffers);
+        if (deltaX > 10) e.preventDefault();
+    }, { passive: false });
+
+    sliderContainerOffers.addEventListener('touchend', () => {
+        if (!isDraggingOffers) return;
+        const deltaX = currentXOffers - startXOffers;
+        if (deltaX > 50) {
+            changeSlideOffers(-1);
+        } else if (deltaX < -50) {
+            changeSlideOffers(1);
+        }
+        resetAutoSlideOffers();
+        startXOffers = 0;
+        currentXOffers = 0;
+        isDraggingOffers = false;
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') {
+            changeSlideOffers(-1);
+            resetAutoSlideOffers();
+        } else if (e.key === 'ArrowRight') {
+            changeSlideOffers(1);
+            resetAutoSlideOffers();
+        }
+    });
 });
 
-setInterval(changeSlide, 7000);
+// REVIEWS
+document.addEventListener('DOMContentLoaded', () => {
+    let currentSlide2 = 0;
+    const slides2 = document.querySelectorAll('.slide2');
+    const totalSlides2 = slides2.length;
+    let autoSlideDirectionReviews = 1;
+    let autoSlideIntervalReviews;
+
+    function changeSlideReviews(direction) {
+        const newSlideIndex = (currentSlide2 + direction + totalSlides2) % totalSlides2;
+        if (newSlideIndex === currentSlide2) return;
+
+        const exitingSlide = slides2[currentSlide2];
+        currentSlide2 = newSlideIndex;
+        const enteringSlide = slides2[currentSlide2];
+
+        exitingSlide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease';
+        exitingSlide.style.transform = direction > 0 ? 'translateX(-105%)' : 'translateX(105%)';
+        exitingSlide.style.opacity = '1';
+
+        enteringSlide.style.transition = 'none';
+        enteringSlide.style.transform = direction > 0 ? 'translateX(105%)' : 'translateX(-105%)';
+        enteringSlide.style.opacity = '1';
+
+        requestAnimationFrame(() => {
+            enteringSlide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease';
+            enteringSlide.style.transform = 'translateX(0)';
+            enteringSlide.style.opacity = '1';
+        });
+    }
+
+    slides2.forEach((slide, index) => {
+        slide.style.position = 'absolute';
+        slide.style.top = '0';
+        slide.style.left = '0';
+        slide.style.width = '100%';
+        slide.style.height = '100%';
+        slide.style.transform = index === 0 ? 'translateX(0)' : 'translateX(105%)';
+        slide.style.opacity = index === 0 ? '1' : '1';
+    });
+
+    let startXReviews = 0;
+    let currentXReviews = 0;
+    let isDraggingReviews = false;
+
+    const sliderContainerReviews = document.querySelector('.slideshow2');
+
+    sliderContainerReviews.addEventListener('touchstart', (e) => {
+        startXReviews = e.touches[0].clientX;
+        isDraggingReviews = true;
+    });
+
+    sliderContainerReviews.addEventListener('touchmove', (e) => {
+        if (!isDraggingReviews) return;
+        currentXReviews = e.touches[0].clientX;
+        const deltaX = Math.abs(currentXReviews - startXReviews);
+
+        if (deltaX > 10) e.preventDefault(); // Prevent scrolling while dragging
+    }, { passive: false });
+
+    sliderContainerReviews.addEventListener('touchend', () => {
+        if (!isDraggingReviews) return;
+        const deltaX = currentXReviews - startXReviews;
+        if (deltaX > 50 && currentSlide2 > 0) {
+            changeSlideReviews(-1); // Move to previous slide
+        } else if (deltaX < -50 && currentSlide2 < totalSlides2 - 1) {
+            changeSlideReviews(1); // Move to next slide
+        }
+        resetAutoSlideReviews();
+        startXReviews = 0;
+        currentXReviews = 0;
+        isDraggingReviews = false;
+    });
+
+    function startAutoSlideReviews() {
+        autoSlideIntervalReviews = setInterval(() => {
+            changeSlideReviews(autoSlideDirectionReviews);
+
+            if (currentSlide2 === 0 || currentSlide2 === totalSlides2 - 1) {
+                autoSlideDirectionReviews = -autoSlideDirectionReviews; // Reverse direction at ends
+            }
+        }, 4500);
+    }
+
+    function resetAutoSlideReviews() {
+        clearInterval(autoSlideIntervalReviews);
+        startAutoSlideReviews();
+    }
+
+    startAutoSlideReviews();
+});

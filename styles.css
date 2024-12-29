@@ -11,6 +11,11 @@ html, body {
     font-family: 'Bebas Neue';
     scroll-behavior: smooth;
 }
+
+h1 {
+    color: #191a1b;
+}
+
 :root {
     --bg-color-1: #6596de;
     --bg-color-2: #3344b5;
@@ -38,7 +43,8 @@ html, body {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ff5722;
+    background: linear-gradient(15deg, #ff8222 0%, 
+    #ff5722 100%);
     color: white;
     font-size: 16px;
     padding: 12px 24px;
@@ -242,6 +248,7 @@ html, body {
     font-size: 70px;
     text-shadow: 4px 4px 16px rgba(0,0,0,0.2);
     line-height: 76px;
+    color: white;
 }
 #banner h4{
     font-size: 30px;
@@ -488,7 +495,7 @@ html, body {
     height: 1100px;
     background: linear-gradient(45deg, var(--bg-color-2) 0%, 
     var(--bg-color-1) 100%);
-    padding: 125px 25px 0 25px;
+    padding: 100px 25px 0 25px;
     color: white;
     font-family: 'Bebas Neue';
     overflow: hidden;
@@ -512,6 +519,7 @@ html, body {
     text-shadow: 4px 4px 16px rgba(0,0,0,0.3);
     line-height: 76px;
     width: 80%;
+    color: white;
 }
 .numbers .content {
     display: flex;
@@ -519,7 +527,6 @@ html, body {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin-top: 25px;
 }
 .numbers .content .box {
     padding-top: 50px;
@@ -543,19 +550,19 @@ html, body {
 }
 
 .numbers .images .bus1 {
-    top: 750px;
+    top: 700px;
     left: -50px;
     transform: rotate(5deg);
 }
 .numbers .images .bus2 {
-    top: 250px;
+    top: 200px;
     left: 275px;
     transform: rotate(-10deg);
 }
 .numbers .images .boxx1 {
     width: 130px;
     height: 125px;
-    top: 445px;
+    top: 390px;
     left: -35px;
     transform: scaleX(-1) rotate(-20deg);
     filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.20));
@@ -563,7 +570,7 @@ html, body {
 .numbers .images .boxx2 {
     width: 130px;
     height: 125px;
-    top: 605px;
+    top: 555px;
     left: 300px;
     transform: scaleX(-1) rotate(20deg);
     filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.20));
@@ -572,7 +579,7 @@ html, body {
 .shape3 {
     transform: scaleX(1);
     z-index: 99;
-    bottom: 675px;
+    bottom: 735px;
 }
 
 
@@ -585,18 +592,18 @@ html, body {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    bottom: 775px;
+    bottom: 840px;
     z-index: 99;
     background-color: #2C2F30;
-    padding-bottom: 80px;
+    padding-bottom: 30px;
 }
 
 #offers .title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: title-appear 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
-    opacity: 0;
+    animation: none;
+    opacity: 1;
     animation-delay: 1s;
 }
 
@@ -617,7 +624,7 @@ html, body {
     overflow: hidden;
 }
 #offers .slide img {
-    border-radius: 10px;
+    border-radius: 20px;
     border: 3px solid var(--bg-color-1);
     width: 100%;
     height: 100%;
@@ -630,7 +637,7 @@ html, body {
 }
 .slides {
     position: relative;
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     height: 100%;
 }
@@ -646,6 +653,10 @@ html, body {
     align-items: center;
 }
 
+.slide.slide-3,
+.slide.slide-1 {
+    z-index: -1;
+}
 .slide.active {
     transform: translateX(0);
     opacity: 1;
@@ -663,8 +674,6 @@ html, body {
     z-index: 100;
     border-radius: 50%;
     width: 35px;
-
-    
 }
 
 .arrow.left-arrow {
@@ -680,9 +689,240 @@ html, body {
 }
 
 .shape4 {
-    bottom: 800px;
+    bottom: 850px;
     transform: scaleX(-1);
 }
+
+
+/* REVIEWS */
+#reviews {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    bottom: 950px;
+    z-index: 99;
+    padding: 0 00px;
+    padding-bottom: 30px;
+    overflow: hidden;
+}
+
+#reviews .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: none;
+    opacity: 1;
+    animation-delay: 1s;
+}
+
+#reviews .title h1 {
+    font-weight: 200;
+    font-size: 30px;
+}
+
+#reviews .title span {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
+}
+.slideshow2 {
+    margin-top: 30px;
+    width: 100%;
+    height: 315px; 
+    font-family: 'Manrope';
+    font-weight: 500;
+}
+.slides2 {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    height: 100%;
+    border-radius: 20px;
+    background: none;
+    z-index: 999;
+}
+
+.slide2 {
+    transform: translateX(100%);
+    opacity: 1;
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    z-index: 9999;
+    
+    border-radius: 20px;
+    background: linear-gradient(45deg, var(--bg-color-1) 0%, 
+    var(--bg-color-2) 100%);
+
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.27);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.27);
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.27);
+}
+.slide2 .shape-review img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.slide2.slide-2 .shape-review img {
+    transform: scaleX(-1);
+}
+.slide2.slide-2{
+    background: linear-gradient(45deg, var(--bg-color-2) 0%, 
+    var(--bg-color-1) 100%);
+}
+
+.slide2.slide-3,
+.slide2.slide-1 {
+    z-index: -1;
+}
+
+
+.slide2 .top-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    align-items: center;
+    border-bottom: 1px solid #2c2f303c;
+    width: 100%;
+    font-size: 14px;
+}
+.slide2 .description {
+    padding: 25px 22px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.slide2 .bottom-container
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    bottom: 10px;
+}
+.slides2 img {
+    width: 22px;
+}
+.slides2 .bottom-container .stars img {
+    width: 27px;
+    padding: 0 4px;
+}
+
+.slide2 .bottom-container .ellipse img {
+    border: 5px solid white;
+    border-radius: 50%;
+    width: 90%;
+    height: 90%;
+}
+.slide2 .bottom-container .ellipse {
+    position: relative;
+    bottom: 13px;
+    background: linear-gradient(45deg, var(--bg-color-2) 0%, var(--bg-color-1) 100%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide2.slide-2 .bottom-container .ellipse
+{
+    background: linear-gradient(45deg, var(--bg-color-1) 0%, var(--bg-color-2) 100%);
+}
+
+.slide2.active {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 99;
+}
+
+#reviews .arrow {
+    position: absolute;
+    top: 51%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 100;
+    border-radius: 50%;
+    width: 35px;   
+}
+
+#reviews .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+#reviews .arrow.left-arrow {
+    left: 10px;
+}
+
+#reviews .arrow.right-arrow {
+    right: 10px;
+}
+
+.shape5 {
+    bottom: 900px;
+    z-index: 99;
+}
+
+#contact {
+    width: 100%;
+    height: 1100px;
+    background: linear-gradient(45deg, var(--bg-color-2) 0%, 
+    var(--bg-color-1) 100%);
+    padding: 100px 25px 0 25px;
+    color: white;
+    font-family: 'Bebas Neue';
+    overflow: hidden;
+    position: relative;
+    bottom: 1150px;
+}
+
+#contact .polygon-container {
+    top: 250px;
+    left: -250px;
+    width: 110%; 
+}
+
+#contact .polygon {
+    animation: none;
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);}
+#contact .title h1 {
+    font-weight: 400;
+    padding-top: 50px;
+    font-size: 70px;
+    text-shadow: 4px 4px 16px rgba(0,0,0,0.3);
+    line-height: 76px;
+    width: 90%;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (max-width: 410px){
