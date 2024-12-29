@@ -349,7 +349,7 @@ h1 {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    bottom: 325px;
+    bottom: 850px;
 }
 
 @keyframes title-appear {
@@ -367,9 +367,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: title-appear 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
-    opacity: 0;
-    animation-delay: 1s;
+    animation: none;
+    opacity: 1;
 }
 
 #destinations .title h1 {
@@ -487,7 +486,7 @@ h1 {
 .shape2 {
     transform: scaleX(-1);
     z-index: 99;
-    bottom: 275px;
+    bottom: 320px;
 }
 
 .numbers {
@@ -500,7 +499,7 @@ h1 {
     font-family: 'Bebas Neue';
     overflow: hidden;
     position: relative;
-    bottom: 500px;
+    bottom: 550px;
 }
 
 .numbers .polygon-container {
@@ -579,7 +578,7 @@ h1 {
 .shape3 {
     transform: scaleX(1);
     z-index: 99;
-    bottom: 735px;
+    bottom: 785px;
 }
 
 
@@ -592,9 +591,8 @@ h1 {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    bottom: 840px;
+    bottom: 320px;
     z-index: 99;
-    background-color: #2C2F30;
     padding-bottom: 30px;
 }
 
@@ -602,15 +600,14 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: none;
-    opacity: 1;
+    opacity: 0;
+    animation: title-appear 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
     animation-delay: 1s;
 }
 
 #offers .title h1 {
     font-weight: 200;
     font-size: 30px;
-    color: white;
 }
 
 #offers .title span {
@@ -701,7 +698,7 @@ h1 {
     justify-content: center;
     flex-direction: column;
     position: relative;
-    bottom: 950px;
+    bottom: 900px;
     z-index: 99;
     padding: 0 00px;
     padding-bottom: 30px;
@@ -872,7 +869,7 @@ h1 {
 }
 
 .shape5 {
-    bottom: 900px;
+    bottom: 800px;
     z-index: 99;
 }
 
@@ -886,7 +883,7 @@ h1 {
     font-family: 'Bebas Neue';
     overflow: hidden;
     position: relative;
-    bottom: 1150px;
+    bottom: 1050px;
 }
 
 #contact .polygon-container {
@@ -909,18 +906,88 @@ h1 {
     color: white;
 }
 
+#contact .title p {
+    background: linear-gradient(45deg, #FFBF00 0%, #ffd453 100%);
+    -webkit-background-clip: text; 
+    background-clip: text; 
+    color: transparent;    
+    font-family: 'Manrope';
+    text-shadow: 4px 4px 16px rgba(0,0,0,0.3);
+    font-weight: 600;
+}
+
+form.contact-form {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    border-radius: 8px;
+    position: relative; 
+    margin-top: 40px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+#contact input, textarea {
+    width: 100%;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-family: 'Manrope';
+    font-weight: 600;
+    transition: .3s ease;
+    border: none;
+    outline: none;
+}
 
 
+#contact button:hover {
+    background-color: #ffd453;
+}
 
+#contact button {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px 10px 30px;
+    font-family: 'Bebas Neue';
+    font-weight: 200;
+    color: #2C2F30;
+    font-size: 25px;
+    border-radius: 48px;
+    text-decoration: none; 
+    background: linear-gradient(-160deg, #FFFFFF 40%, #0062FF 250%);
+    box-shadow: 10px 10px 47px -17px rgba(0, 0, 0, 0.66);
+    -webkit-box-shadow: 10px 10px 47px -17px rgba(0, 0, 0, 0.66);
+    -moz-box-shadow: 10px 10px 47px -17px rgba(0, 0, 0, 0.66);
+    width: 60%;
+    cursor: pointer;
+    position: relative;
+    transition: .3s ease;
+    outline: none;
+    border: none;
+}
+#contact button img {
+    position: relative;
+    top: -1px;
+    left: 5px;
+}
+form.contact-form .form-group {
+    position: relative;
+}
+#contact img {
+    position: absolute;
+    right: 30px;
+    top: 13px;
+    width: 22px;
+}
 
-
-
-
-
-
-
-
-
+#contact .form-group:nth-child(3) img {
+    width: 24px;
+    right: 27px;
+}
 
 
 
