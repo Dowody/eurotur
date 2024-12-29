@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
         currentSlide2 = newSlideIndex;
         const enteringSlide = slides2[currentSlide2];
 
-        exitingSlide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease';
+        exitingSlide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
         exitingSlide.style.transform = direction > 0 ? 'translateX(-105%)' : 'translateX(105%)';
         exitingSlide.style.opacity = '1';
 
@@ -275,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
         enteringSlide.style.opacity = '1';
 
         requestAnimationFrame(() => {
-            enteringSlide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease';
+            enteringSlide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
             enteringSlide.style.transform = 'translateX(0)';
             enteringSlide.style.opacity = '1';
         });
