@@ -1024,7 +1024,7 @@ form.contact-form .form-group {
 #footer h5 {
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
 }
 #footer a {
     text-decoration: none;
@@ -1042,7 +1042,7 @@ form.contact-form .form-group {
     height: 18px;
 }
 #footer .box2 {
-    margin: 20px 0 30px 0;
+    margin: 20px 0 25px 0;
 } 
 #footer .box2 .icons {
     margin-top: 12px;
@@ -1056,7 +1056,7 @@ form.contact-form .form-group {
     color: white;
     font-weight: 600;
     font-size: 14px;
-    padding: 40px 0;
+    padding: 30px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.263);
 }
 #footer .credentials .bar {
@@ -1067,7 +1067,7 @@ form.contact-form .form-group {
     font-family: 'Manrope';
     color: white;
     display: flex;
-    padding: 30px 0 40px 0;
+    padding: 30px 0 30px 0;
     flex-direction: column;
     justify-content: center;
 }
