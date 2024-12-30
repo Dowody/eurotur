@@ -1,3 +1,11 @@
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    preloader.classList.add('hidden');
+    setTimeout(() => {
+        preloader.style.display = 'none';
+    }, 500);
+});
+
 const nav = document.querySelector(".top-nav");
 let lastScrollY = window.scrollY; 
 
