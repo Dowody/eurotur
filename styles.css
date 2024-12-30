@@ -993,7 +993,7 @@ form.contact-form .form-group {
 /* FOOTER */
 
 #footer {
-    height: 560px;
+    height: 515px;
     width: 100%;
     background-color: #1D232B;
     position: relative;
@@ -1054,7 +1054,7 @@ form.contact-form .form-group {
 #footer .credentials {
     font-family: 'Manrope';
     color: white;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px;
     padding: 30px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.263);
