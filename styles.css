@@ -23,7 +23,7 @@ h1 {
     --body-color: #FCFBF4;
 }
 
-#preloader {
+/* #preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -68,7 +68,7 @@ h1 {
     opacity: 0;
     visibility: hidden;
     transition: visibility 0s 0.5s, opacity 0.5s linear;
-}
+} */
 
 @keyframes moveButton {
     0% {

@@ -5,17 +5,17 @@
 //         preloader.style.display = 'none';
 //     }, 500);
 // });
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    preloader.classList.add('hidden');
-    setTimeout(() => {
-        preloader.style.display = 'none';
-        let preloadImages = document.querySelectorAll('.preload-excluded');
-        preloadImages.forEach(function(image) {
-            image.style.visibility = 'visible';
-        });
-    }, 500);
-});
+// window.addEventListener('load', () => {
+//     const preloader = document.getElementById('preloader');
+//     preloader.classList.add('hidden');
+//     setTimeout(() => {
+//         preloader.style.display = 'none';
+//         let preloadImages = document.querySelectorAll('.preload-excluded');
+//         preloadImages.forEach(function(image) {
+//             image.style.visibility = 'visible';
+//         });
+//     }, 500);
+// });
 
 
 const nav = document.querySelector(".top-nav");
