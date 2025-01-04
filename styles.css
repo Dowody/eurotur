@@ -232,7 +232,7 @@ h1 {
     }
 }
 #logo-header img.logo {
-    width: 90%;
+    width: 70%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 4px 4px 16px rgba(0,0,0,0.05);
