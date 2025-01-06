@@ -1,21 +1,16 @@
-// window.addEventListener('load', () => {
-//     const preloader = document.getElementById('preloader');
-//     preloader.classList.add('hidden');
-//     setTimeout(() => {
-//         preloader.style.display = 'none';
-//     }, 500);
-// });
-// window.addEventListener('load', () => {
-//     const preloader = document.getElementById('preloader');
-//     preloader.classList.add('hidden');
-//     setTimeout(() => {
-//         preloader.style.display = 'none';
-//         let preloadImages = document.querySelectorAll('.preload-excluded');
-//         preloadImages.forEach(function(image) {
-//             image.style.visibility = 'visible';
-//         });
-//     }, 500);
-// });
+document.addEventListener('DOMContentLoaded', () => {
+    const preloader = document.getElementById('preloader');
+    
+    setTimeout(() => {
+        preloader.classList.add('hidden');
+        setTimeout(() => {
+            preloader.style.display = 'none';
+            document.querySelectorAll('.preload-excluded').forEach(image => {
+                image.style.visibility = 'visible';
+            });
+        }, 500);
+    }, 2000);
+});
 
 
 const nav = document.querySelector(".top-nav");

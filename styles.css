@@ -23,11 +23,12 @@ h1 {
     --body-color: #FCFBF4;
 }
 
-/* #preloader {
+#preloader {
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
+    right: 0;
     width: 100%;
     height: 100%;
     background-color: #ffffff;
@@ -59,12 +60,13 @@ h1 {
 #preloader.hidden {
     opacity: 0;
     visibility: hidden;
-}
+} 
 
 .preload-excluded {
     visibility: hidden;
 }
-.hidden {
+
+/* .hidden {
     opacity: 0;
     visibility: hidden;
     transition: visibility 0s 0.5s, opacity 0.5s linear;
