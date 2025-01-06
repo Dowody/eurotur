@@ -118,7 +118,7 @@ h1 {
     font-weight: 600;
     text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
     animation: moveButton 3s ease-in-out infinite;
-    animation-delay: 1.5s;
+    animation-delay: 1.4s;
 }
 .hot-offers button:hover {
     background-color: #e64a19;
@@ -183,7 +183,7 @@ h1 {
     justify-content: center;
     align-items: center;
     animation: 1s nav-appear cubic-bezier(0.25, 0.8, 0.25, 1);
-    animation-delay: 1.5s;
+    animation-delay: 1.4s;
 
 }
 #nav a {
@@ -205,7 +205,7 @@ h1 {
     position: relative;
     top: 2px;
     animation: 1s nav-appear cubic-bezier(0.25, 0.8, 0.25, 1);
-    animation-delay: 1.5s;
+    animation-delay: 1.4s;
 }
 #nav .social img {
     width: 45px;
@@ -257,7 +257,7 @@ h1 {
     top: 0px;
 
     animation: 1s logo-header-img cubic-bezier(0.25, 0.8, 0.25, 1);
-    animation-delay: 1.5s;
+    animation-delay: 1.4s;
 }
 @keyframes logo-header-button {
     0% {
@@ -276,7 +276,7 @@ h1 {
     box-shadow: none;
     padding: initial;
     animation: 1s logo-header-button cubic-bezier(0.25, 0.8, 0.25, 1);
-    animation-delay: 1.5s;
+    animation-delay: 1.4s;
 }
 #logo-header button img {
     height: 30px;
@@ -307,7 +307,7 @@ h1 {
 }
 #banner .content {
     animation: banner-container 2s cubic-bezier(0.25, 0.8, 0.25, 1);
-    animation-delay: 1.5s;
+    animation-delay: 1.4s;
 }
 
 #banner h1 {
@@ -367,7 +367,7 @@ h1 {
     height: auto; 
     animation: polygon-appear 2s ;
     transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-    animation-delay: 1.5s;
+    animation-delay: 1.4s;
 }
 
 #button {
@@ -580,7 +580,11 @@ h1 {
 
 .numbers .polygon {
     animation: none;
-    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);}
+    transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.numbers .title {
+    margin-bottom: 10px;
+}
 .numbers .title h1 {
     font-weight: 400;
     padding-top: 50px;
@@ -610,9 +614,6 @@ h1 {
     font-size: 17px;
 }
 .numbers .images img {
-    top: 0;
-    left: 0;
-    right: 0;
     position: absolute;
     width: 190px;
     filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.50));
@@ -624,15 +625,15 @@ h1 {
     transform: rotate(5deg);
 }
 .numbers .images .bus2 {
-    top: 200px;
-    left: 275px;
+    top: 220px;
+    right: -30px;
     transform: rotate(-10deg);
 }
 .numbers .images .boxx1 {
     width: 130px;
     height: 125px;
     top: 390px;
-    left: -35px;
+    left: -30px;
     transform: scaleX(-1) rotate(-20deg);
     filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.20));
 }
@@ -640,7 +641,7 @@ h1 {
     width: 130px;
     height: 125px;
     top: 555px;
-    left: 300px;
+    right: -30px;
     transform: scaleX(-1) rotate(20deg);
     filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.20));
 }
@@ -1028,6 +1029,7 @@ form.contact-form {
     transition: .3s ease;
     border: none;
     outline: none;
+    resize: none;
 }
 
 
@@ -1182,6 +1184,26 @@ form.contact-form .form-group {
         justify-content: center;
         width: 65%;
     }
+    #contact button {
+        width: 68%;
+    }
+
+    .slideshow {
+        height: 310px; 
+    }
+    
+    .slideshow2 {
+        height: 350px;    
+    }
+    .slide2.slide-5 .description {
+        top: 30px;
+    }
+    .slide2.slide-5 .bottom-container {
+        bottom: -56px;
+    }
+    .slide2.slide-4 .bottom-container {
+        bottom: -36px;
+    }
     
 }
 
@@ -1193,5 +1215,22 @@ form.contact-form .form-group {
         justify-content: center;
         width: 70%;
     }
+
+    .slideshow {
+        height: 300px; 
+    }
     
+    .slideshow2 {
+        height: 345px;    
+    }
+    .slide2.slide-5 .bottom-container {
+        bottom: -56px;
+    }
+    .slide2.slide-4 .bottom-container {
+        bottom: -36px;
+    }
+    .shape5 {
+        bottom: 808px;
+        z-index: 99;
+    }
 }

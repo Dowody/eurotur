@@ -3,13 +3,6 @@ const preloader = document.getElementById('preloader');
 
 setTimeout(() => {
     preloader.classList.add('fadeOut');
-
-    setTimeout(() => {
-        preloader.style.display = 'none';
-        document.querySelectorAll('.preload-excluded').forEach(image => {
-            image.style.visibility = 'visible';
-        });
-    }, 1000); 
 }, 1500); 
 
 
