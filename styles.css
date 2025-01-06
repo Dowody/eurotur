@@ -1081,6 +1081,7 @@ form.contact-form {
     var(--bg-color-2) 100%);
     color: white;
     width: 60%;
+    margin: 50px auto;
 }
 
 form.contact-form .form-group {
@@ -1151,6 +1152,7 @@ form.contact-form .form-group {
     background-image: url('icons/arrow-down.svg');
     background-position: right 10px center;
     background-repeat: no-repeat;
+    display: flex;
 }
 
 #offers textarea {

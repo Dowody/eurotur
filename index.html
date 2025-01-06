@@ -6,6 +6,38 @@
     <title>Euro Tur</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="icons/LOGO-E.png" type="image/png">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+              publicKey: "dzg9QgcYe_UR0YLvb",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_qt9urtk', 'template_q6z9xbg', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+
+            document.getElementById('reservation-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_qt9urtk', 'template_vuww4sj', this)
+                    .then(() => {
+                        console.log('SUCCESS!');
+                    }, (error) => {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
 </head>
 
 <!-- <div id="preloader">
@@ -96,7 +128,7 @@
                 <!-- <button class="arrow right-arrow" onclick="changeSlide(1)">&#10095;</button> -->
             </div>
         </div>
-        <form action="https://formspree.io/f/mbllyvwv" method="POST" class="contact-form">
+        <form method="POST" id="reservation-form">
             <div class="form-title">
                 <h1>Rezervează Călătoria ta</h1>
             </div>
@@ -130,7 +162,7 @@
                 </select>
             </div>
             <div class="form-group">
-                <input type="text" id="name" name="Nume, Prenume" placeholder="Nume și Prenume" required>
+                <input type="text" id="name" name="Nume" placeholder="Nume și Prenume" required>
                 <img src="icons/avatar.png" alt="">
             </div>
         
@@ -425,14 +457,15 @@
             <p>Răspundem în cel mai scurt timp!</p>
         </div>
 
-        <form action="https://formspree.io/f/mbllyvwv" method="POST" class="contact-form reveal-item">
+            <form id="contact-form" method="POST" class="contact-form reveal-item">
+
             <div class="form-group">
                 <input type="text" id="name" name="name" placeholder="Nume și Prenume" required>
                 <img src="icons/avatar.png" alt="">
             </div>
         
             <div class="form-group">
-                <input type="tel" id="phone" name="phone" placeholder="Număr De Telefon" required pattern="[\+]?[0-9]{10,15}" title="Phone number should be 10 to 15 digits, optional leading +">
+                <input type="tel" id="phone" name="phone" placeholder="Număr De Telefon" required pattern="[\+]?[0-9]{10,15}" title="Numărul de telefon trebuie să includă minim 9 cifre, incepând cu +">
                 <img src="icons/phone-call.png" alt="">
             </div>
         
@@ -497,7 +530,7 @@
 
 
 
-
+   
     <script src="script.js"></script>
 </body>
 </html>
