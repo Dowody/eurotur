@@ -356,8 +356,9 @@ h1 {
 
 .polygon-container {
     position: absolute;
-    top: 0px;
-    left: 100px;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%; 
     height: 100%; 
 }
@@ -556,7 +557,7 @@ h1 {
 .shape2 {
     transform: scaleX(-1);
     z-index: 99;
-    bottom: 320px;
+    bottom: 350px;
 }
 
 .numbers {
@@ -569,11 +570,11 @@ h1 {
     font-family: 'Bebas Neue';
     overflow: hidden;
     position: relative;
-    bottom: 550px;
+    bottom: 570px;
 }
 
 .numbers .polygon-container {
-    top: 250px;
+    top: 200px;
     left: -250px;
     width: 110%; 
 }
@@ -846,7 +847,11 @@ h1 {
     background: linear-gradient(45deg, var(--bg-color-2) 0%, 
     var(--bg-color-1) 100%);
 }
+.slide2.slide-4 {
+    background: linear-gradient(45deg, var(--bg-color-2) 0%, 
+    var(--bg-color-1) 100%);
 
+}
 
 
 .slide2 .top-info {
@@ -977,12 +982,12 @@ h1 {
 }
 
 #contact .polygon-container {
-    top: 250px;
-    right: -250px;
-    width: 110%; 
+    top: 150px;
+    left: 0px;
 }
 
 #contact .polygon {
+    width: 150%;
     animation: none;
     transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -1019,9 +1024,11 @@ form.contact-form {
     margin-bottom: 15px;
 }
 
-#contact input, textarea {
+#contact input, textarea,
+#offers input, textarea
+{
     width: 100%;
-    padding: 15px 30px;
+    padding: 15px 70px 15px 30px;
     border-radius: 30px;
     font-size: 14px;
     font-family: 'Manrope';
@@ -1031,13 +1038,17 @@ form.contact-form {
     outline: none;
     resize: none;
 }
+#offers .form-group {
+    padding: 0 15px;
+}
 
-
-#contact button:hover {
+#contact button:hover,
+#offers button:hover {
     background-color: #ffd453;
 }
 
-#contact button {
+#contact button,
+#offers button {
     margin-top: 40px;
     display: flex;
     align-items: center;
@@ -1053,38 +1064,141 @@ form.contact-form {
     box-shadow: 10px 10px 47px -17px rgba(0, 0, 0, 0.66);
     -webkit-box-shadow: 10px 10px 47px -17px rgba(0, 0, 0, 0.66);
     -moz-box-shadow: 10px 10px 47px -17px rgba(0, 0, 0, 0.66);
-    width: 60%;
+    width: 65%;
     cursor: pointer;
     position: relative;
     transition: .3s ease;
     outline: none;
     border: none;
 }
-#contact button img {
-    position: relative;
-    top: -1px;
-    left: 5px;
+
+#offers button {
+    -webkit-box-shadow: 0px 18px 21px -4px rgba(0,0,0,0.18);
+    -moz-box-shadow: 0px 18px 21px -4px rgba(0,0,0,0.18);
+    box-shadow: 0px 18px 21px -4px rgba(0,0,0,0.18);
+    margin-left: 12px;
+    background: linear-gradient(45deg, var(--bg-color-1) 0%, 
+    var(--bg-color-2) 100%);
+    color: white;
+    width: 60%;
 }
+
 form.contact-form .form-group {
     position: relative;
 }
-#contact img {
+#contact img,
+#offers form img {
     position: absolute;
     right: 30px;
     top: 13px;
     width: 22px;
 }
 
-#contact .form-group:nth-child(3) img {
+#contact .form-group:nth-child(3) img,
+#offers .form-group:nth-child(3) img {
     width: 24px;
     right: 27px;
 }
+#offers button img,
+    #contact button img {
+    position: relative;
+    top: -1px;
+    left: 0px;
+    margin-left: 10px;
+    width: 20px;
+}
+#offers .contact-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 50px 15px;
+}
 
+#offers .form-group {
+    position: relative;
+}
+
+#offers input[type="text"],
+#offers input[type="tel"],
+#offers textarea,
+#offers select {
+    width: 100%;
+    padding: 15px 30px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-family: 'Manrope';
+    font-weight: 600;
+    transition: .3s ease;
+    border: none;
+    outline: none;
+    resize: none;
+    border: 1px solid #757575;
+}
+
+#offers input[type="text"]:focus,
+#offers input[type="tel"]:focus,
+#offers select:focus {
+    outline: none;
+    border-color: var(--bg-color-1);
+    background-color: #fff;
+}
+
+#offers select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: #f9f9f9;
+    background-image: url('icons/arrow-down.svg');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+}
+
+#offers textarea {
+    resize: none;
+}
+
+#offers .form-group label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+    font-family: 'Manrope';
+    font-weight: 600;
+    margin-top: 10px;
+    transition: .3s ease;
+
+}
+
+#offers .form-group input[type="checkbox"] {
+    margin-right: 15px;
+    width: 20px;
+    height: 20px;
+    accent-color: #007bff;
+    transition: .3s ease;
+    
+}
+
+#retour {
+    border-radius: 50%;
+    margin-left: 5px;
+    transition: .3s ease;
+}
+
+#offers .form-title h1 {
+    font-weight: 400;
+    padding-top: 50px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 76px;
+    width: 100%;
+    color: #191A1B;
+    padding: 15px 15px;
+}
 
 /* FOOTER */
 
 #footer {
-    height: 560px;
+    height: 580px;
     width: 100%;
     background-color: #1D232B;
     position: relative;
@@ -1205,6 +1319,15 @@ form.contact-form .form-group {
         bottom: -36px;
     }
     
+    #footer .credentials {
+        font-size: 13px;
+    }
+    #footer .nav a {
+        font-size: 13px;
+    }
+    #offers button {
+        width: 65%;
+    }
 }
 
 @media screen and (max-width: 380px){
@@ -1233,4 +1356,23 @@ form.contact-form .form-group {
         bottom: 808px;
         z-index: 99;
     }
+    #footer .credentials {
+        font-size: 13px;
+    }
+    #footer .nav a {
+        font-size: 13px;
+    }
+    #contact .title h1 {
+        font-weight: 400;
+        padding-top: 50px;
+        font-size: 70px;
+        text-shadow: 4px 4px 16px rgba(0,0,0,0.3);
+        line-height: 76px;
+        width: 100%;
+        color: white;
+    }
+    #offers button {
+        width: 65%;
+    }
+
 }

@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Euro Tur</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icons/LOGO-E.png" type="image/png">
 </head>
 
-<div id="preloader">
+<!-- <div id="preloader">
     <div class="spinner"></div>
-</div>
+</div> -->
 
 <body>
     
@@ -95,6 +96,58 @@
                 <!-- <button class="arrow right-arrow" onclick="changeSlide(1)">&#10095;</button> -->
             </div>
         </div>
+        <form action="https://formspree.io/f/mbllyvwv" method="POST" class="contact-form">
+            <div class="form-title">
+                <h1>Rezervează Călătoria ta</h1>
+            </div>
+            <div class="form-group">
+                <select id="start-city" name="Plecare" required>
+                    <option value="" disabled selected>Selectează Orașul de Plecare</option>
+                    <option value="Chișinău">Chișinău</option>
+                    <option value="Frankfurt">Frankfurt</option>
+                    <option value="Köln">Köln</option>
+                    <option value="München">München</option>
+                    <option value="Berlin">Berlin</option>
+                    <option value="Amsterdam">Amsterdam</option>
+                    <option value="Bruxelles">Bruxelles</option>
+                    <option value="Vienna">Vienna</option>
+                    <option value="Budapest">Budapest</option>
+                </select>
+            </div>
+        
+            <div class="form-group">
+                <select id="destination-city" name="Sosire" required>
+                    <option value="" disabled selected>Selectează Orașul de Destinație</option>
+                    <option value="Chișinău">Chișinău</option>
+                    <option value="Frankfurt">Frankfurt</option>
+                    <option value="Köln">Köln</option>
+                    <option value="München">München</option>
+                    <option value="Berlin">Berlin</option>
+                    <option value="Amsterdam">Amsterdam</option>
+                    <option value="Bruxelles">Bruxelles</option>
+                    <option value="Vienna">Vienna</option>
+                    <option value="Budapest">Budapest</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="text" id="name" name="Nume, Prenume" placeholder="Nume și Prenume" required>
+                <img src="icons/avatar.png" alt="">
+            </div>
+        
+            <div class="form-group">
+                <input type="tel" id="phone" name="Telefon" placeholder="Număr De Telefon" required pattern="[\+]?[0-9]{10,15}" title="Phone number should be 10 to 15 digits, optional leading +">
+                <img src="icons/phone-call.png" alt="">
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input type="checkbox" id="retour" name="Retur">
+                    Retur
+                </label>
+            </div>
+        
+            <button type="submit">Rezervează loc<img src="icons/ticket.png" alt=""></button>
+        </form>
     </section>
 
     <div class="shape shape2">
@@ -372,15 +425,15 @@
             <p>Răspundem în cel mai scurt timp!</p>
         </div>
 
-    <form action="https://formspree.io/f/mbllyvwv" method="POST" class="contact-form reveal-item">
+        <form action="https://formspree.io/f/mbllyvwv" method="POST" class="contact-form reveal-item">
             <div class="form-group">
                 <input type="text" id="name" name="name" placeholder="Nume și Prenume" required>
-                <img src="icons/email.png" alt="">
+                <img src="icons/avatar.png" alt="">
             </div>
         
             <div class="form-group">
-                <input type="email" id="email" name="email" placeholder="Adresa Electronică" required>
-                <img src="icons/avatar.png" alt="">
+                <input type="tel" id="phone" name="phone" placeholder="Număr De Telefon" required pattern="[\+]?[0-9]{10,15}" title="Phone number should be 10 to 15 digits, optional leading +">
+                <img src="icons/phone-call.png" alt="">
             </div>
         
             <div class="form-group group3">
@@ -388,7 +441,7 @@
                 <img src="icons/bubble-chat.png" alt="">
             </div>
         
-            <button type="submit">Expediaza Email <img src="icons/send.png" alt=""></button>
+            <button type="submit">Expediaza Mesaj <img src="icons/send.png" alt=""></button>
         </form>
     </section>
 
