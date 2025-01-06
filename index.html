@@ -21,9 +21,9 @@
                 event.preventDefault();
                 emailjs.sendForm('service_qt9urtk', 'template_q6z9xbg', this)
                     .then(() => {
-                        console.log('SUCCESS!');
+                        alert('Mesajul a fost expediat cu succes. Vă vom contacta în curând!');
                     }, (error) => {
-                        console.log('FAILED...', error);
+                        alert('Mesajul nu a putut fi expediat. Vă rugăm să încercați mai târziu sau apelați la +373 69 665 977!');
                     });
             });
 
@@ -31,9 +31,9 @@
                 event.preventDefault();
                 emailjs.sendForm('service_qt9urtk', 'template_vuww4sj', this)
                     .then(() => {
-                        console.log('SUCCESS!');
+                        alert('Rezervarea a fost facută cu succes. Vă vom contacta în curând!');
                     }, (error) => {
-                        console.log('FAILED...', error);
+                        alert('Rezervarea nu poate fi făcută. Vă rugăm să încercați mai târziu sau apelați la +373 69 665 977!');
                     });
             });
         }
