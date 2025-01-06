@@ -232,13 +232,13 @@ h1 {
     }
 }
 #logo-header img.logo {
-    width: 70%;
+    width: 65%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 4px 4px 16px rgba(0,0,0,0.05);
     font-weight: 400;
     position: relative;
-    top: 5px;
+    top: 0px;
 
     animation: 1s logo-header-img cubic-bezier(0.25, 0.8, 0.25, 1);
 }
@@ -709,6 +709,7 @@ h1 {
     opacity: 1;
 }
 
+
 .arrow {
     position: absolute;
     top: 51%;
@@ -776,7 +777,7 @@ h1 {
 .slideshow2 {
     margin-top: 30px;
     width: 100%;
-    height: 315px; 
+    height: 330px; 
     font-family: 'Manrope';
     font-weight: 500;
 }
@@ -813,6 +814,7 @@ h1 {
     top: 0;
     left: 0;
     width: 100%;
+    height: 69%;
     z-index: -1;
 }
 
@@ -843,7 +845,7 @@ h1 {
 .slide2 .description {
     padding: 25px 22px;
     font-size: 14px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     text-align: center;
 }
 .slide2 .bottom-container
@@ -891,6 +893,27 @@ h1 {
     z-index: 99;
 }
 
+.slide2 .bottom-container{
+    bottom: 20px;
+}
+.slide2.slide-3 .bottom-container,
+.slide2.slide-5 .bottom-container {
+    bottom: -36px;
+}
+.slide2.slide-4 .bottom-container {
+    bottom: -17px;
+}
+.slide2.slide-3 .description ,
+    .slide2.slide-5 .description {
+
+    position: relative;
+    top: 25px;
+}
+.slide2.slide-4 .description {
+
+    position: relative;
+    top: 20px;
+}
 #reviews .arrow {
     position: absolute;
     top: 51%;
