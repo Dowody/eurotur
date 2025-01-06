@@ -1,51 +1,29 @@
+
+const preloader = document.getElementById('preloader');
+
+setTimeout(() => {
+    preloader.classList.add('fadeOut');
+
+    setTimeout(() => {
+        preloader.style.display = 'none';
+        document.querySelectorAll('.preload-excluded').forEach(image => {
+            image.style.visibility = 'visible';
+        });
+    }, 1000); 
+}, 1500); 
+
+
 // window.addEventListener('load', () => {
 //     const preloader = document.getElementById('preloader');
-//     preloader.classList.add('hidden');
-//     setTimeout(() => {
-//         preloader.style.display = 'none';
-//     }, 500);
-// });
-// window.addEventListener('load', () => {
-//     const preloader = document.getElementById('preloader');
-//     preloader.classList.add('hidden');
+//     preloader.classList.add('fadeOut');
 //     setTimeout(() => {
 //         preloader.style.display = 'none';
 //         let preloadImages = document.querySelectorAll('.preload-excluded');
 //         preloadImages.forEach(function(image) {
 //             image.style.visibility = 'visible';
 //         });
-//     }, 500);
+//     }, 1000);
 // });
-
-
-// document.addEventListener('DOMContentLoaded', () => {
-//     const preloader = document.getElementById('preloader');
-
-//     setTimeout(() => {
-//         preloader.classList.add('hidden');
-        
-//         setTimeout(() => {
-//             preloader.style.display = 'none';  // Hide after the fade
-//             document.querySelectorAll('.preload-excluded').forEach(image => {
-//                 image.style.visibility = 'visible'; // Make images visible
-//             });
-
-//             // Force reflow to prevent layout jump
-//             document.body.offsetHeight; // This will trigger a reflow
-//         }, 500);
-//     }, 2000);
-// });
-window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    preloader.classList.add('fadeOut');
-    setTimeout(() => {
-        preloader.style.display = 'none';
-        let preloadImages = document.querySelectorAll('.preload-excluded');
-        preloadImages.forEach(function(image) {
-            image.style.visibility = 'visible';
-        });
-    }, 1000);
-});
 
 
 const nav = document.querySelector(".top-nav");

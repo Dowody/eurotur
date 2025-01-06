@@ -116,7 +116,7 @@ h1 {
     font-weight: 600;
     text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15);
     animation: moveButton 3s ease-in-out infinite;
-
+    animation-delay: 1.5s;
 }
 .hot-offers button:hover {
     background-color: #e64a19;
@@ -181,6 +181,8 @@ h1 {
     justify-content: center;
     align-items: center;
     animation: 1s nav-appear cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation-delay: 1.5s;
+
 }
 #nav a {
     text-decoration: none;
@@ -201,6 +203,7 @@ h1 {
     position: relative;
     top: 2px;
     animation: 1s nav-appear cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation-delay: 1.5s;
 }
 #nav .social img {
     width: 45px;
@@ -252,6 +255,7 @@ h1 {
     top: 0px;
 
     animation: 1s logo-header-img cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation-delay: 1.5s;
 }
 @keyframes logo-header-button {
     0% {
@@ -270,6 +274,7 @@ h1 {
     box-shadow: none;
     padding: initial;
     animation: 1s logo-header-button cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation-delay: 1.5s;
 }
 #logo-header button img {
     height: 30px;
@@ -300,6 +305,7 @@ h1 {
 }
 #banner .content {
     animation: banner-container 2s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation-delay: 1.5s;
 }
 
 #banner h1 {
@@ -359,6 +365,7 @@ h1 {
     height: auto; 
     animation: polygon-appear 2s ;
     transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+    animation-delay: 1.5s;
 }
 
 #button {
@@ -663,7 +670,7 @@ h1 {
     align-items: center;
     opacity: 0;
     animation: title-appear 1s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
-    animation-delay: 1s;
+    animation-delay: 3s;
 }
 
 #offers .title h1 {
