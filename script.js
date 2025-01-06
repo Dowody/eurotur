@@ -278,27 +278,41 @@ document.addEventListener('DOMContentLoaded', () => {
     let autoSlideDirectionReviews = 1;
     let autoSlideIntervalReviews;
 
-    function changeSlideReviews(direction) {
-        const newSlideIndex = (currentSlide2 + direction + totalSlides2) % totalSlides2;
-        if (newSlideIndex === currentSlide2) return;
-
-        const exitingSlide = slides2[currentSlide2];
-        currentSlide2 = newSlideIndex;
-        const enteringSlide = slides2[currentSlide2];
-
-        exitingSlide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
-        exitingSlide.style.transform = direction > 0 ? 'translateX(-105%)' : 'translateX(105%)';
-        exitingSlide.style.opacity = '1';
-
-        enteringSlide.style.transition = 'none';
-        enteringSlide.style.transform = direction > 0 ? 'translateX(105%)' : 'translateX(-105%)';
-        enteringSlide.style.opacity = '1';
-
-        requestAnimationFrame(() => {
-            enteringSlide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
-            enteringSlide.style.transform = 'translateX(0)';
-            enteringSlide.style.opacity = '1';
+    function updateSlidePositions() {
+        slides2.forEach((slide, index) => {
+            const offset = (index - currentSlide2 + totalSlides2) % totalSlides2;
+    
+            if (offset === 0) {
+                // Current slide
+                slide.style.transform = 'translateX(0)';
+                slide.style.zIndex = 2;
+                slide.style.opacity = '1';
+                slide.style.display = 'block';
+            } else if (offset === 1) {
+                // Next slide
+                slide.style.transform = 'translateX(105%)';
+                slide.style.zIndex = 1;
+                slide.style.opacity = '1';
+                slide.style.display = 'block';
+            } else if (offset === totalSlides2 - 1) {
+                // Previous slide
+                slide.style.transform = 'translateX(-105%)';
+                slide.style.zIndex = 1;
+                slide.style.opacity = '1';
+                slide.style.display = 'block';
+            } else {
+                // Other slides (completely hidden)
+                slide.style.transform = 'translateX(105%)';
+                slide.style.zIndex = 0;
+                slide.style.opacity = '0';
+                slide.style.display = 'none'; // Hide them completely
+            }
         });
+    }
+
+    function changeSlideReviews(direction) {
+        currentSlide2 = (currentSlide2 + direction + totalSlides2) % totalSlides2;
+        updateSlidePositions();
     }
 
     slides2.forEach((slide, index) => {
@@ -307,8 +321,7 @@ document.addEventListener('DOMContentLoaded', () => {
         slide.style.left = '0';
         slide.style.width = '100%';
         slide.style.height = '100%';
-        slide.style.transform = index === 0 ? 'translateX(0)' : 'translateX(105%)';
-        slide.style.opacity = index === 0 ? '1' : '1';
+        slide.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.8s cubic-bezier(0.25, 0.8, 0.25, 1)';
     });
 
     let startXReviews = 0;
@@ -320,6 +333,7 @@ document.addEventListener('DOMContentLoaded', () => {
     sliderContainerReviews.addEventListener('touchstart', (e) => {
         startXReviews = e.touches[0].clientX;
         isDraggingReviews = true;
+        clearInterval(autoSlideIntervalReviews); // Stop auto-scrolling on user interaction
     });
 
     sliderContainerReviews.addEventListener('touchmove', (e) => {
@@ -333,12 +347,11 @@ document.addEventListener('DOMContentLoaded', () => {
     sliderContainerReviews.addEventListener('touchend', () => {
         if (!isDraggingReviews) return;
         const deltaX = currentXReviews - startXReviews;
-        if (deltaX > 50 && currentSlide2 > 0) {
+        if (deltaX > 50) {
             changeSlideReviews(-1); // Move to previous slide
-        } else if (deltaX < -50 && currentSlide2 < totalSlides2 - 1) {
+        } else if (deltaX < -50) {
             changeSlideReviews(1); // Move to next slide
         }
-        resetAutoSlideReviews();
         startXReviews = 0;
         currentXReviews = 0;
         isDraggingReviews = false;
@@ -347,17 +360,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function startAutoSlideReviews() {
         autoSlideIntervalReviews = setInterval(() => {
             changeSlideReviews(autoSlideDirectionReviews);
-
-            if (currentSlide2 === 0 || currentSlide2 === totalSlides2 - 1) {
-                autoSlideDirectionReviews = -autoSlideDirectionReviews; // Reverse direction at ends
-            }
         }, 4500);
     }
 
-    function resetAutoSlideReviews() {
-        clearInterval(autoSlideIntervalReviews);
-        startAutoSlideReviews();
-    }
-
     startAutoSlideReviews();
+    updateSlidePositions();
 });
