@@ -10,6 +10,7 @@ html, body {
     padding: 0;
     font-family: 'Bebas Neue';
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -39,6 +40,8 @@ h1 {
 }
 
 #preloader .spinner {
+    position: relative;
+    bottom: 5%;
     border: 6px solid #f3f3f3;
     border-top: 6px solid #3498db;
     border-radius: 50%;
@@ -1098,7 +1101,8 @@ form.contact-form .form-group {
 }
 
 #footer .logo img {
-    width: 150px;
+    width: 300px;
+    margin: 20px 0;
     position: relative;
     left: -15px;
 }
