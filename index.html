@@ -132,54 +132,58 @@
             <div class="form-title">
                 <h1>Rezervează Călătoria ta</h1>
             </div>
-            <div class="form-group">
-                <select id="start-city" name="Plecare" required>
-                    <option value="" disabled selected>Selectează Orașul de Plecare</option>
-                    <option value="Chișinău">Chișinău</option>
-                    <option value="Frankfurt">Frankfurt</option>
-                    <option value="Köln">Köln</option>
-                    <option value="München">München</option>
-                    <option value="Berlin">Berlin</option>
-                    <option value="Amsterdam">Amsterdam</option>
-                    <option value="Bruxelles">Bruxelles</option>
-                    <option value="Vienna">Vienna</option>
-                    <option value="Budapest">Budapest</option>
-                </select>
+            <div class="form-rezervare">
+                <div class="select-forms">
+                    <div class="form-group">
+                        <select id="start-city" name="Plecare" required>
+                            <option value="" disabled selected>Plecare</option>
+                            <option value="Chișinău">Chișinău</option>
+                            <option value="Frankfurt">Frankfurt</option>
+                            <option value="Köln">Köln</option>
+                            <option value="München">München</option>
+                            <option value="Berlin">Berlin</option>
+                            <option value="Amsterdam">Amsterdam</option>
+                            <option value="Bruxelles">Bruxelles</option>
+                            <option value="Vienna">Vienna</option>
+                            <option value="Budapest">Budapest</option>
+                        </select>
+                    </div>
+                
+                    <div class="form-group">
+                        <select id="destination-city" name="Sosire" required>
+                            <option value="" disabled selected>Destinație</option>
+                            <option value="Chișinău">Chișinău</option>
+                            <option value="Frankfurt">Frankfurt</option>
+                            <option value="Köln">Köln</option>
+                            <option value="München">München</option>
+                            <option value="Berlin">Berlin</option>
+                            <option value="Amsterdam">Amsterdam</option>
+                            <option value="Bruxelles">Bruxelles</option>
+                            <option value="Vienna">Vienna</option>
+                            <option value="Budapest">Budapest</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="name" name="Nume" placeholder="Nume și Prenume" required>
+                    <img src="icons/avatar.png" alt="">
+                </div>
+            
+                <div class="form-group">
+                    <input type="tel" id="phone" name="Telefon" placeholder="Număr De Telefon" required pattern="[\+]?[0-9]{10,15}" title="Phone number should be 10 to 15 digits, optional leading +">
+                    <img src="icons/phone-call.png" alt="">
+                </div>
+    
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" id="retour" name="Retur">
+                        Retur
+                    </label>
+                </div>
+            
+                <button type="submit">Rezervează loc<img src="icons/ticket.png" alt=""></button>
+            </form>
             </div>
-        
-            <div class="form-group">
-                <select id="destination-city" name="Sosire" required>
-                    <option value="" disabled selected>Selectează Orașul de Destinație</option>
-                    <option value="Chișinău">Chișinău</option>
-                    <option value="Frankfurt">Frankfurt</option>
-                    <option value="Köln">Köln</option>
-                    <option value="München">München</option>
-                    <option value="Berlin">Berlin</option>
-                    <option value="Amsterdam">Amsterdam</option>
-                    <option value="Bruxelles">Bruxelles</option>
-                    <option value="Vienna">Vienna</option>
-                    <option value="Budapest">Budapest</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <input type="text" id="name" name="Nume" placeholder="Nume și Prenume" required>
-                <img src="icons/avatar.png" alt="">
-            </div>
-        
-            <div class="form-group">
-                <input type="tel" id="phone" name="Telefon" placeholder="Număr De Telefon" required pattern="[\+]?[0-9]{10,15}" title="Phone number should be 10 to 15 digits, optional leading +">
-                <img src="icons/phone-call.png" alt="">
-            </div>
-
-            <div class="form-group">
-                <label>
-                    <input type="checkbox" id="retour" name="Retur">
-                    Retur
-                </label>
-            </div>
-        
-            <button type="submit">Rezervează loc<img src="icons/ticket.png" alt=""></button>
-        </form>
     </section>
 
     <div class="shape shape2">

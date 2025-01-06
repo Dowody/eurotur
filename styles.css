@@ -1039,6 +1039,9 @@ form.contact-form {
     resize: none;
 }
 #offers .form-group {
+    padding: 0 5px;
+}
+.form-rezervare {
     padding: 0 15px;
 }
 
@@ -1145,6 +1148,7 @@ form.contact-form .form-group {
 }
 
 #offers select {
+    width: 170px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -1153,6 +1157,11 @@ form.contact-form .form-group {
     background-position: right 10px center;
     background-repeat: no-repeat;
     display: flex;
+}
+.select-forms {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 #offers textarea {
