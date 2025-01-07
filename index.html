@@ -31,18 +31,19 @@
                 event.preventDefault();
                 emailjs.sendForm('service_qt9urtk', 'template_vuww4sj', this)
                     .then(() => {
-                        alert('Rezervarea a fost facută cu succes. Vă vom contacta în curând!');
+                        alert('Am primit mesajul dvs. Vă vom contacta în curând!');
                     }, (error) => {
-                        alert('Rezervarea nu poate fi făcută. Vă rugăm să încercați mai târziu sau apelați la +373 69 665 977!');
+                        alert('Vă rugăm să încercați mai târziu sau apelați la +373 69 665 977!');
                     });
             });
         }
     </script>
+
 </head>
 
-<div id="preloader">
+<!-- <div id="preloader">
     <div class="spinner"></div>
-</div>
+</div> -->
 
 <body>
     
@@ -124,55 +125,67 @@
                 <div class="slide slide-3">
                     <img src="icons/offers/photo_2024-12-28 23.17.15.jpeg" alt="">
                 </div>
-                <!-- <button class="arrow left-arrow" onclick="changeSlide(-1)">&#10094;</button> -->
-                <!-- <button class="arrow right-arrow" onclick="changeSlide(1)">&#10095;</button> -->
             </div>
         </div>
         <form method="POST" id="reservation-form">
             <div class="form-title">
-                <h1>Rezervează Călătoria ta</h1>
+                <h1>Află costul unui transport</h1>
             </div>
+            <p class="comment">*Transportăm în orice localitate din următoarele țări: Germania, Austria, Olanda, Belgia, Ungaria <span>🇩🇪 🇦🇹 🇳🇱 🇧🇪 🇭🇺</span> </p>
             <div class="form-rezervare">
-                <div class="select-forms">
-                    <div class="form-group">
-                        <select id="start-city" name="Plecare" required>
-                            <option value="" disabled selected>Plecare</option>
-                            <option value="Chișinău">Chișinău</option>
-                            <option value="Frankfurt">Frankfurt</option>
-                            <option value="Köln">Köln</option>
-                            <option value="München">München</option>
-                            <option value="Berlin">Berlin</option>
-                            <option value="Amsterdam">Amsterdam</option>
-                            <option value="Bruxelles">Bruxelles</option>
-                            <option value="Vienna">Vienna</option>
-                            <option value="Budapest">Budapest</option>
-                        </select>
-                    </div>
-                
-                    <div class="form-group">
-                        <select id="destination-city" name="Sosire" required>
-                            <option value="" disabled selected>Destinație</option>
-                            <option value="Chișinău">Chișinău</option>
-                            <option value="Frankfurt">Frankfurt</option>
-                            <option value="Köln">Köln</option>
-                            <option value="München">München</option>
-                            <option value="Berlin">Berlin</option>
-                            <option value="Amsterdam">Amsterdam</option>
-                            <option value="Bruxelles">Bruxelles</option>
-                            <option value="Vienna">Vienna</option>
-                            <option value="Budapest">Budapest</option>
-                        </select>
-                    </div>
-                </div>
                 <div class="form-group">
                     <input type="text" id="name" name="Nume" placeholder="Nume și Prenume" required>
                     <img src="icons/avatar.png" alt="">
                 </div>
             
                 <div class="form-group">
-                    <input type="tel" id="phone" name="Telefon" placeholder="Număr De Telefon" required pattern="[\+]?[0-9]{10,15}" title="Numărul de telefon trebuie să includă minim 9 cifre, incepând cu +">
+                    <input type="tel" id="phone" name="Telefon" placeholder="Număr De Telefon" required pattern="[\+]?[0-9]{10,15}" title="Numărul de telefon trebuie să includă minim 9 cifre, incepând cu +, fără spații">
                     <img src="icons/phone-call.png" alt="">
                 </div>
+
+                <p class="comment2">Plecare</p>
+                <div class="select-forms">
+                    <div class="form-group">
+                        <input type="text" id="country" name="Plecare1" placeholder="Țară" required>
+                        <img src="icons/location-2.png" alt="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="city" name="Plecare2" placeholder="Oraș" required>
+                        <img src="icons/location-2.png" alt="">
+                    </div>
+                </div>
+                <div class="select-forms">
+                    <div class="form-group">
+                        <input type="text" id="adress" name="Plecare3" placeholder="Localitate" required>
+                        <img src="icons/location.png" alt="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="postcode" name="Plecare4" placeholder="Cod Poștal" required>
+                        <img src="icons/email.png" alt="">
+                    </div>
+                </div>
+                <p class="comment2">Destinație</p>
+                <div class="select-forms">
+                    <div class="form-group">
+                        <input type="text" id="country" name="Sosire1" placeholder="Țară" required>
+                        <img src="icons/location-2.png" alt="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="city" name="Sosire2" placeholder="Oraș" required>
+                        <img src="icons/location-2.png" alt="">
+                    </div>
+                </div>
+                <div class="select-forms">
+                    <div class="form-group">
+                        <input type="text" id="adress" name="Sosire3" placeholder="Localitate" required>
+                        <img src="icons/location.png" alt="">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="postcode" name="Sosire4" placeholder="Cod Poștal" required>
+                        <img src="icons/email.png" alt="">
+                    </div>
+                </div>
+                
     
                 <div class="form-group select">
                     <label>
@@ -181,7 +194,7 @@
                     </label>
                 </div>
             
-                <button type="submit">Rezervează loc<img src="icons/ticket.png" alt=""></button>
+                <button type="submit">Află Prețul<img src="icons/ticket.png" alt=""></button>
             </form>
             </div>
     </section>
@@ -359,8 +372,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <button class="arrow left-arrow" onclick="changeSlide2(-1)">&#10094;</button> -->
-                <!-- <button class="arrow right-arrow" onclick="changeSlide2(1)">&#10095;</button> -->
             </div>
         </div>
     </section>
@@ -528,7 +539,7 @@
             </div>
         </div>
         <div class="credentials">
-            <span>©</span> 2025 Euro Tur <span class="bar"> | </span> Toate drepturile sunt rezervate.
+            <span>©</span> 2025 Euro Tour <span class="bar"> | </span> Toate drepturile sunt rezervate.
         </div>
     </section>
 

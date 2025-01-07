@@ -1084,7 +1084,7 @@ form.contact-form {
     var(--bg-color-2) 100%);
     color: white;
     width: 60%;
-    margin: 50px auto;
+    margin: 10px auto 50px auto;
 }
 
 form.contact-form .form-group {
@@ -1127,7 +1127,7 @@ form.contact-form .form-group {
 #offers textarea,
 #offers select {
     width: 100%;
-    padding: 15px 30px;
+    padding: 15px 50px 15px 30px;
     border-radius: 30px;
     font-size: 14px;
     font-family: 'Manrope';
@@ -1158,11 +1158,6 @@ form.contact-form .form-group {
     background-repeat: no-repeat;
     display: flex;
 }
-.select-forms {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
 
 #offers textarea {
     resize: none;
@@ -1188,23 +1183,40 @@ form.contact-form .form-group {
 
 #retour {
     margin-left: 5px;
+    margin-right: 10px;
     transition: .3s ease;
 }
 
 #offers .form-title h1 {
     font-weight: 400;
-    padding-top: 50px;
     font-size: 30px;
     text-align: center;
     line-height: 76px;
     width: 100%;
     color: #191A1B;
-    padding: 15px 15px;
+    padding: 15px 15px 0 15px;
 }
-#offers .form-group.select {
+#offers .comment {
+    font-family: 'Manrope';
+    font-size: 14px;
+    padding: 0px 0px 30px 0px;
+    text-align: center;
+    margin: 0 auto;
+    width: 90%;
+}
+#offers .comment span {
+    display: block;
+    font-size: 24px;
+}
+.select-forms {
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+#offers .comment2 {
+    font-family: 'Manrope';
+    font-size: 14px;
+    padding: 15px 0px 15px 10px;
+    font-weight: 600;
+    width: 90%;
 }
 /* FOOTER */
 
