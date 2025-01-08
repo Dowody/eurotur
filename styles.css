@@ -317,6 +317,7 @@ h1 {
     text-shadow: 4px 4px 16px rgba(0,0,0,0.2);
     line-height: 76px;
     color: white;
+    width: 100%;
 }
 #banner h4{
     font-size: 30px;
@@ -593,6 +594,7 @@ h1 {
     text-shadow: 4px 4px 16px rgba(0,0,0,0.3);
     line-height: 76px;
     width: 80%;
+    margin-bottom: 0;
     color: white;
 }
 .numbers .content {
@@ -1127,7 +1129,6 @@ form.contact-form .form-group {
 #offers input[type="tel"],
 #offers textarea,
 #offers select {
-    width: 100%;
     padding: 15px 50px 15px 30px;
     border-radius: 30px;
     font-size: 14px;
@@ -1138,9 +1139,9 @@ form.contact-form .form-group {
     outline: none;
     resize: none;
     border: 1px solid #757575;
+    width: 100%; /* Ensures they occupy full width of the container */
+    box-sizing: border-box; /* Ensures padding is included in width calculation */
 }
-
-
 
 #offers select {
     appearance: none;
@@ -1152,13 +1153,10 @@ form.contact-form .form-group {
     background-repeat: no-repeat;
     display: flex;
     position: relative;
-    margin-right: 100px;
+    color: #757575;
     background: none;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    color: #a9a9a9;
 }
+
 #offers input[type="text"]:focus,
 #offers input[type="tel"]:focus,
 #offers select:focus {
@@ -1194,6 +1192,13 @@ form.contact-form .form-group {
 }
 .select-forms {
     display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0px; 
+}
+.select-forms .form-group {
+    flex: 1; 
+    position: relative;
 }
 #offers .comment2 {
     font-family: 'Manrope';
@@ -1380,6 +1385,257 @@ form.contact-form .form-group {
     }
     #offers button {
         width: 65%;
+    }
+}
+
+@media screen and (min-width: 420px){
+    .numbers {
+        bottom: 580px;
+    }
+    .numbers .title h1 {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 460px){
+    #banner h1 {
+        width: 80%;
+    }
+    #logo-header img.logo {
+        width: 50%;
+    }
+    .slideshow {
+        height: 350px;
+    }
+    #offers .comment {
+        width: 70%;
+    }
+    .numbers {
+        bottom: 600px;
+    }
+    .numbers .title h1 {
+        width: 60%;
+    }
+    #contact .title h1 {
+        padding-top: 100px;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 493px){
+    .numbers {
+        bottom: 630px;
+    }
+    .numbers .title h1 {
+        width: 60%;
+        padding-top: 100px;
+    }
+    .slideshow {
+        height: 370px;
+    }
+    .slide2.slide-2 .bottom-container {
+        bottom: 1px;
+    }
+    .slide2.slide-4 .bottom-container {
+        bottom: -37px;
+    }
+    #contact {
+        bottom: 1100px;
+    }
+
+    #contact .title h1 {
+        padding-top: 100px;
+        width: 70%;
+    }
+
+}
+@media screen and (min-width: 535px)
+{
+    .slide2 .description {
+        padding: 25px 35px;
+    }
+    .shape3 {
+        bottom: 805px;
+
+    }
+    .numbers .title h1 {
+        width: 55%;
+        padding-top: 100px;
+    }
+}
+
+@media screen and (min-width: 555px)
+{
+    .numbers {
+        bottom: 650px;
+    }
+    .shape3 {
+        bottom: 855px;
+    }
+    #reviews {
+        bottom: 1000px;
+    }
+
+    .slide2 .description {
+        padding: 25px 48px;
+    }
+    .slideshow {
+        height: 390px;
+    }
+    form.contact-form {
+        margin: 40px 0;
+    }
+    #banner h1 {
+        width: 70%;
+    }
+}
+@media screen and (min-width: 595px)
+{
+    .slideshow {
+        height: 410px;
+    }
+    .numbers {
+        bottom: 680px;
+    }
+    .numbers .title h1 {
+        width: 55%;
+        padding-top: 125px;
+    }
+    #logo-header img.logo {
+        width: 40%;
+    }
+    #contact {
+        bottom: 1150px;
+    }
+    #contact .title h1 {
+        padding-top: 100px;
+        width: 60%;
+    }
+    .slide2 .description {
+        padding: 25px 65px;
+    }
+    .numbers .images .bus1 {
+        top: 760px;
+    }
+    .numbers .images .bus2 {
+        top: 280px;
+    }
+    .numbers .images .boxx1 {
+        top: 450px;
+    }
+    .numbers .images .boxx2 {
+        top: 615px;
+    }
+    .shape3 {
+        bottom: 885px;
+    }
+    #reviews {
+        bottom: 1050px;
+    }
+    #destinations {
+        bottom: 950px;
+    }
+    #banner h1 {
+        width: 68%;
+    }
+    #destinations .card {
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 636px)
+{
+    .slide2.slide-1 .bottom-container {
+        bottom: 0;
+    }
+    .numbers {
+        bottom: 700px;
+    }
+    .numbers .title h1 {
+        width: 55%;
+        padding-top: 125px;
+    }
+    .shape3 {
+        bottom: 940px;
+    }
+}
+
+@media screen and (min-width: 660px)
+{
+    #logo-header img.logo {
+        width: 32%;
+    }
+    #banner h1 {
+        width: 60%;
+    }
+    .shape {
+        bottom: 230px;
+    }
+    .shape3 {
+        bottom: 980px;
+    }
+    .slideshow {
+        height: 500px;
+    }
+    .shape2 {
+        bottom: 350px;
+    }
+    .numbers {
+        bottom: 750px;
+    }
+    #reviews {
+        bottom: 1200px;
+    }
+    #destinations {
+        bottom: 1100px
+    }
+    .shape5 {
+        bottom: 1000px;
+    }
+    #contact {
+        bottom: 1400px;
+    }
+    #footer {
+        bottom: 1500px;
+    }
+}
+
+@media screen and (min-width: 747px){
+    .shape {
+        bottom: 270px;
+    }
+    #offers {
+        bottom: 500px;
+    }
+    .slideshow {
+        height: 500px;
+    }
+    .shape3 {
+        bottom: 1200px;
+    }
+    .shape2 {
+        bottom: 550px;
+    }
+    .numbers {
+        bottom: 970px;
+    }
+    #reviews {
+        bottom: 1400px;
+    }
+    #destinations {
+        bottom: 1300px
+    }
+    #destinations .card {
+        height: 350px;
+    }
+    .shape5 {
+        bottom: 1150px;
+    }
+    #contact {
+        bottom: 1550px;
+    }
+    #footer {
+        bottom: 1700px;
     }
 
 }
