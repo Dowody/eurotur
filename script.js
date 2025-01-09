@@ -113,13 +113,16 @@ revealOnScroll();
 
 function isInViewport2(element) {
     const rect = element.getBoundingClientRect();
-    return rect.top >= 0 && rect.left >= 0 && rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) && rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+    return (
+        rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.bottom > 0
+    );
 }
 
 function revealOnScroll2() {
-    const revealItems = document.querySelectorAll('[class*="reveal-item"]'); // Select all elements with 'reveal-item' in their class name
+    const revealItems = document.querySelectorAll('[class*="reveal-item"]');
     revealItems.forEach(item => {
-        if (isInViewport2(item) && !item.classList.contains('reveal')) {  // Add 'reveal' only if not already revealed
+        if (isInViewport2(item) && !item.classList.contains('reveal')) {
             item.classList.add('reveal');
         }
     });
@@ -127,7 +130,7 @@ function revealOnScroll2() {
 
 window.addEventListener('scroll', revealOnScroll2);
 window.addEventListener('load', revealOnScroll2);
-window.addEventListener('load', revealOnScroll2);
+document.addEventListener('DOMContentLoaded', revealOnScroll2);
 
 
 
