@@ -22,6 +22,18 @@ h1 {
     --shape-color: #E4E7FF;
     --body-color: #FCFBF4;
 }
+.slideshow.mobile {
+    display: block;
+}
+
+.slidesho.desktop {
+    display: none;
+}
+
+.anav {
+    display: none;
+}
+
 #preloader {
     position: fixed;
     top: 0;
@@ -706,6 +718,19 @@ h1 {
     width: 100%;
     height: 330px; 
 }
+
+#offers .slidesho {
+    padding: 30px 0px;
+    width: 100%;
+    overflow: hidden;
+}
+.slidesho {
+    position: relative;
+    width: 100%;
+    height: 330px; 
+}
+
+
 .slides {
     position: relative;
     width: 85%;
@@ -733,31 +758,37 @@ h1 {
     opacity: 1;
 }
 
-
-.arrow {
-    position: absolute;
-    top: 51%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 100;
-    border-radius: 50%;
-    width: 35px;
+.slidesdesktop {
+    position: relative;
+    width: 85%;
+    margin: 0 auto;
+    height: 100%;
 }
 
-.arrow.left-arrow {
-    left: 10px;
+.slidedesktop {
+    width: 100%;
+    height: 100%;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.8s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.5s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ;
+}
+.slidedesktop.active {
+    transform: translateX(0);
+    opacity: 1;
 }
 
-.arrow.right-arrow {
-    right: 10px;
-}
 
-.arrow:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+.slide.slide-3,
+.slide.slide-1 {
+    z-index: -1;
+}
+.slide.active {
+    transform: translateX(0);
+    opacity: 1;
 }
 
 .shape4 {
@@ -1593,6 +1624,9 @@ form.contact-form .form-group {
     #destinations .card {
         height: 300px;
     }
+    #banner #button {
+        width: 40%;
+    }
 }
 
 @media screen and (min-width: 636px)
@@ -1650,6 +1684,12 @@ form.contact-form .form-group {
     #footer {
         bottom: 1500px;
     }
+    .slideshow {
+        height: 400px;
+    }
+    .slides {
+        width: 70%;
+    }
 }
 
 @media screen and (min-width: 747px){
@@ -1689,5 +1729,444 @@ form.contact-form .form-group {
     #footer {
         bottom: 1700px;
     }
+}
 
+@media screen and (min-width: 768px){
+    .slideshow.mobile {
+        display: none;
+    }
+    
+    .slidesho.desktop {
+        display: block;
+        height: 100%;
+    }
+    .slidedesktop {
+        height: 350px;
+        overflow: hidden;
+        margin: 20px 10px;
+        border: 3px solid var(--bg-color-1);
+        border-radius: 15px;
+    }
+    
+    .slidedesktop img {
+        width: 100%;
+    }
+    
+    .polygon {
+        width: 110%;
+    }
+    #banner #button {
+        width: 30%;
+    }
+    .shape img {
+        height: 380px;
+    }
+    #offers {
+        bottom: 400px;
+    }
+    .slideshow {
+        height: 430px;
+    }
+    .slides {
+        width: 70%;
+    }
+    #offers {
+        padding-bottom: 200px;
+    }
+    .shape2 {
+        bottom: 600px;
+    }
+    .numbers .content {
+        flex-direction: row;
+    }
+    .numbers .content .box {
+        padding: 100px 20px;
+    }
+    .numbers .title{
+        margin-top: 40px;
+    }
+    .numbers .title h1 {
+        width: 100%;
+    }
+    .numbers .images .bus1 {
+        top: 550px;
+    }
+    .numbers .images .bus2 {
+        top: 285px;
+    }
+    .numbers .images .boxx1 {
+        top: 350px;
+    }
+    .numbers .images .boxx2 {
+        top: 500px;
+    }
+    .numbers {
+        height: 950px;
+    }
+    .slides2
+     {
+        width: 60%;
+     }
+    .slides2 .description {
+        padding: 25px 20px;
+    }
+    #destinations .container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 0px;
+    }
+
+    .card1 { grid-area: 1 / 1 / 2 / 2; }
+    .card2 { grid-area: 1 / 2 / 2 / 3; }
+    .card3 { grid-area: 2 / 1 / 3 / 2; }
+    .card4 { grid-area: 2 / 2 / 3 / 3; }
+    .card5 { position: relative; left: 55%;}
+
+    #destinations .card {
+        height: 250px;
+    }
+    .shape5 {
+        bottom: 1250px;
+    }
+    #contact button {
+        width: 50%;
+    }
+
+    .slidesdesktop {
+        padding: 0 40px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 30px;
+        grid-row-gap: 0px;
+        transition: .3s ease;
+    }
+    .slidedesktop {
+        height: 240px;
+    }
+    .slide-1 { grid-area: 1 / 1 / 2 / 2; }
+    .slide-2 { grid-area: 1 / 2 / 2 / 3; }
+    .slide-3 {
+         position: relative;
+         left: 55%;
+    }
+    .slidedesktop img {
+        height: 100%;
+    }
+} 
+@media screen and (min-width: 845px ) {
+    .slidedesktop {
+        height: 265px;
+    }
+}
+@media screen and (min-width: 920px ) {
+    .slidedesktop {
+        height: 285px;
+    }
+    #contact {
+        bottom: 1600px;
+    }
+}
+@media screen and (min-width: 980px) {
+    .slidedesktop {
+        height: 310px;
+    }
+    #banner {
+        padding: 155px 50px 0 50px;
+    }
+    #logo-header button
+    {
+        display: none;
+    }
+    .anav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: 1s logo-header-button cubic-bezier(0.25, 0.8, 0.25, 1);
+        animation-delay: 1.4s;
+    }
+
+    .anav a.active {
+        color: #2C2E30;
+    }
+    #contact {
+        bottom: 1650px;
+    }
+    .anav a {
+        position: relative;
+        font-family: 'Manrope';
+        text-decoration: none;
+        color: #2C2E30;
+        width: 100px;
+        padding: 5px 0;
+        margin: 0 30px;
+        text-align: center;
+        font-weight: 600;
+        border: none;
+        transition: color .3s ease, background-color .3s ease;
+    }
+    
+    .anav a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        right: 50%;
+        height: 3px;
+        background-color: var(--bg-color-1);
+        transition: left .3s ease, right .3s ease;
+    }
+    
+    .anav a:hover::after {
+        left: 0;
+        right: 0;
+    }
+    .anav a.galerie {
+        margin-right: 15px;
+    }
+    #nav {
+        padding: 0 65px;
+    }
+    #logo-header {
+        padding: 0 50px;
+    }
+    #nav .social img {
+        margin: 0 10px;
+    }
+    .shape img {
+        height: 480px;
+    }
+    #logo-header img.logo {
+        width: 58%;
+    }
+    .polygon {
+        width: 80%;
+    }
+    .polygon-container {
+        left: 30%;
+    }
+}
+@media screen and (min-width: 1050px) {
+    .slidedesktop {
+        height: 335px;
+    }
+    
+}
+@media screen and (min-width: 1000px) {
+    #logo-header img.logo {
+        width: 50%;
+    }
+    
+}
+@media screen and (min-width: 1000px) {
+    #logo-header img.logo {
+        width: 40%;
+    }
+    #banner #button {
+        width: 25%;
+    }
+    #banner {
+        height: 900px;
+    }
+    #banner h1 {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 100px;
+        line-height: 110px;
+        width: 70%;
+    }
+    #banner h4 {
+        font-size: 50px;
+    }
+    #banner .flags h5 {
+        font-size: 60px;
+    }
+    #button {
+        padding: 18px 30px 16px 30px;
+    }
+    #banner #button {
+        width: 30%;
+    }
+    #offers .title h1 {
+        font-size: 40px;
+    }
+    #offers {
+        bottom: 500px;
+    }
+   
+    .form-rezervare {
+        padding: 0 60px;
+    }
+    #offers .form-title h1 {
+        font-size: 40px;
+    }
+    #offers .comment {
+        font-size: 18px;
+        width: 40%;
+    }
+    #offers .comment span {
+        font-size: 30px;
+    }
+    .form-rezervare {
+        padding: 0 200px;
+    }
+    #offers{
+        padding-bottom: 100px;
+    }
+    .numbers {
+        padding: 70px 60px 0 60px;
+        height: 840px;
+    }
+    .numbers .title h1 {
+        font-size: 80px;
+        padding-top: 80px;
+    }
+    .numbers .content .box {
+        padding: 100px 50px;
+    }
+    .numbers .images .bus1 {
+        top: 490px;
+    }
+    .numbers .images .bus2 {
+        top: 285px;
+    }
+    .numbers .images .boxx1 {
+        top: 320px;
+    }
+    .numbers .images .boxx2 {
+        top: 500px;
+    }
+    #offers button {
+        padding: 18px 30px 16px 30px;
+        margin-top: 50px;
+    }
+    .slideshow2 {
+        height: 380px;
+    }
+    .slides2 {
+        width: 50%;
+    }
+    #contact {
+        bottom: 1700px;
+    }
+    #reviews .title h1 {
+        font-size: 40px;
+    }
+    #destinations .title h1{
+        font-size: 40px;
+    }
+    .slide2 .description {
+        font-size: 17px;
+        padding: 25px 55px;
+    }
+    #contact .title h1 {
+        font-size: 90px;
+        line-height: 100px;
+        width: 60%;
+        padding-top: 150px;
+    }
+    #contact .title p {
+        font-size: 18px;
+    }
+    #contact button {
+        padding: 18px 30px 16px 30px;
+        margin-top: 50px;
+    }
+    #contact {
+        padding: 100px 60px 0 60px;
+    }
+    .slide2.slide-3 .bottom-container, .slide2.slide-5 .bottom-container {
+        bottom: -67px;
+    }
+    .slide2.slide-4 .bottom-container {
+        bottom: -72px;
+    }
+    .slide2 .top-info {
+        font-size: 16px;
+    }
+    #destinations {
+        padding: 0 60px;
+    }
+    .numbers .content .box h2 {
+        font-size: 60px;
+    }
+    .numbers .content .box p {
+        font-size: 18px;
+    }
+    #footer a {
+        font-size: 18px;
+    }
+    #footer .nav a {
+        font-size: 16px;
+    }
+    #footer .credentials {
+        font-size: 16px;
+    }
+    #footer {
+        padding: 5px 60px;
+    }
+}
+@media screen and (min-width: 1100px)
+{
+    .slidedesktop {
+        height: 295px;
+    }
+    .slidesdesktop{
+        padding: 0 100px;
+    }
+}
+@media screen and (min-width: 1270px) {
+    #logo-header img.logo {
+        width: 35%;
+    }
+    .slidedesktop {
+        height: 325px;
+    }
+    .numbers .content .box {
+        padding: 100px 70px;
+    }
+    .slides2 {
+        width: 45%;
+    }
+}
+@media screen and (min-width: 1300px) {
+    .slidedesktop {
+        height: 295px;
+    }
+    .slidesdesktop{
+        padding: 0 200px;
+    }
+    #destinations .card {
+        height: 300px;
+    }
+
+}
+
+@media screen and (min-width: 1450px) {
+    #logo-header img.logo {
+        width: 25%;
+    }
+    .slidedesktop {
+        height: 355px;
+    }
+    #destinations .card {
+        height: 400px;
+    }
+    #destinations {
+        padding: 0 160px;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    .slidedesktop {
+        height: 405px;
+    }
+    
+    
+    .slides2 {
+        width: 35%;
+    }
 }

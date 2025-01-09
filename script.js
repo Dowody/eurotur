@@ -1,4 +1,4 @@
-
+ 
 const preloader = document.getElementById('preloader');
 
 setTimeout(() => {
@@ -15,7 +15,7 @@ setTimeout(() => {
 //         preloadImages.forEach(function(image) {
 //             image.style.visibility = 'visible';
 //         });
-//     }, 1000);
+//     }, 1000);   
 // });
 
 
@@ -146,10 +146,10 @@ document.addEventListener('DOMContentLoaded', function() {
         function animateCount() {
             if (current < target) {
                 current += increment;
-                element.textContent = `+${Math.floor(current)}`; // Add "+" sign before the number
+                element.textContent = `${Math.floor(current)}`; // Add "+" sign before the number
                 requestAnimationFrame(animateCount); // Call the next frame for the animation
             } else {
-                element.textContent = `+${target}`; // Ensure it reaches the final value with "+" sign
+                element.textContent = `${target}`; // Ensure it reaches the final value with "+" sign
             }
         }
 
