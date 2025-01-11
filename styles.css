@@ -2108,6 +2108,10 @@ form.contact-form .form-group {
     #footer {
         padding: 5px 60px;
     }
+    #contact .polygon {
+        width: 100%;
+        left:40%;
+    }
 }
 @media screen and (min-width: 1100px)
 {
@@ -2153,20 +2157,60 @@ form.contact-form .form-group {
         height: 355px;
     }
     #destinations .card {
-        height: 400px;
+        height: 300px;
     }
     #destinations {
-        padding: 0 160px;
+        padding: 0 300px;
     }
+    .numbers .content .box h2 {
+        font-size: 75px;
+    }
+    .numbers .content .box p {
+        font-size: 20px;
+    }
+    
 }
 
 @media screen and (min-width: 1700px) {
+
+    #banner {
+        padding: 155px 140px 0 140px;
+    }
     .slidedesktop {
         height: 405px;
     }
     
-    
+    #banner h1 {
+        width: 38%;
+    }
     .slides2 {
         width: 35%;
+    }
+    .slidesdesktop {
+        padding: 0 350px;
+    }
+    .form-rezervare {
+        padding: 0 500px;
+    }
+    #contact {
+        padding: 100px 140px;
+    }
+    #contact .title h1 {
+        width: 40%;
+    }
+    #contact .title p {
+        padding-bottom: 30px;
+    }
+    #logo-header img.logo {
+        width: 18%;
+    }
+    #logo-header {
+        padding: 0 140px;
+    }
+    #nav {
+        padding: 0 155px;
+    }
+    .polygon {
+        width: 60%;
     }
 }
