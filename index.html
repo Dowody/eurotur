@@ -65,42 +65,118 @@
     <!-- Nav -->
     <section id="nav">
         <div class="phone">
-            <img src="icons/telephone.png" alt="">
+            <img src="icons/telephone.png" alt="Transport rapid cu microbuz către Germania, servicii confortabile pentru călătorii sigure.">
             <a href="tel:+37369665977">+373 69 665 977</a>
         </div>
         <div class="social">
             <a href="https://wa.me/+37369665977" target="_blank">
-                <img src="icons/whatsapp.webp" alt="WhatsApp">
+                <img src="icons/whatsapp.webp" alt="WhatsApp Transport rapid cu microbuz către Germania, servicii confortabile pentru călătorii sigure.">
             </a>
             <a href="https://t.me/+37369665977" target="_blank">
-                <img src="icons/telegram.png" alt="Telegram">
+                <img src="icons/telegram.png" alt="Telegram Transport rapid cu microbuz către Germania, servicii confortabile pentru călătorii sigure.">
             </a>
             <a href="https://m.me/sv.trans" target="_blank">
-                <img src="icons/messenger.png" alt="Messenger">
+                <img src="icons/messenger.png" alt="Messenger Transport rapid cu microbuz către Germania, servicii confortabile pentru călătorii sigure.">
             </a>
         </div>
     </section>
+    <div id="menu-overlay"></div>
     <div class="top-nav">
         <section id="logo-header">
             <a href="index.html">
-                <img class="logo" src="icons/logo2.png" alt="">
+                <img class="logo" src="icons/logo2.png" alt="Transport cu microbuz din Chișinău către Germania, călătorii sigure și rapide.">
             </a>
-            <button type="submit">
-                <img src="icons/menu.png" alt="">
+            <button type="submit" id="menu-button">
+                <img src="icons/menu.png" alt="Servicii de transport Chișinău - Ungaria, confort și prețuri accesibile.">
             </button>
             <div class="anav">
                 <a href="" class="active">Acasă</a>
-                <a href="">Despre Noi</a>
-                <a href="" class="galerie">Galerie</a>
+                <a href="">Galerie</a>
+                <a href="#footer" class="galerie">Contact</a>
             </div>
         </section>
         <div id="scroll-status-bar"></div>
     </div>
+    <nav id="hamburger-menu">
+        <h1>Meniu</h1>
+        <div class="nav">
+            <a href="#">Acasă</a>
+            <a href="#">Galerie</a>
+            <a href="#footer">Contact</a>
+        </div>
+
+        <div class="box1 box">
+            <h5>Contacteaza-ne la:</h5>
+            <div class="number">
+                <div>
+                    <img src="icons/telephone.png" alt="">
+                    <a href="tel:+37369665977">+373 69 665 977</a>
+                </div>
+                <div>
+                    <img src="icons/telephone.png" alt="">
+                    <a href="tel:+37369665977">+373 69 665 977</a>
+                </div>
+            </div>
+        </div>
+        <div class="box2 box">
+            <h5>Sau scrie-ne un mesaj:</h5>
+            <div class="icons">
+                <a href="https://www.instagram.com/eurotur.transport/" target="_blank">
+                    <img src="icons/instagram.png" alt="Instagran">
+                </a>
+                <a href="viber://chat?number=+37369665977" target="_blank">
+                    <img src="icons/viber.png" alt="Viber">
+                </a>
+                <a href="https://wa.me/+37369665977" target="_blank">
+                    <img src="icons/whatsapp.webp" alt="WhatsApp">
+                </a>
+                <a href="https://t.me/+37369665977" target="_blank">
+                    <img src="icons/telegram.png" alt="Telegram">
+                </a>
+                <a href="https://m.me/sv.trans" target="_blank">
+                    <img src="icons/messenger.png" alt="Messenger">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const navLinks = document.querySelectorAll('#hamburger-menu .nav a');
+    
+        menuButton.addEventListener('click', () => {
+            if (hamburgerMenu.style.left === '0%') {
+                hamburgerMenu.style.left = '-70%';
+                menuOverlay.style.display = 'none';
+            } else {
+                hamburgerMenu.style.left = '0';
+                menuOverlay.style.display = 'block';
+            }
+        });
+    
+        menuOverlay.addEventListener('click', () => {
+            hamburgerMenu.style.left = '-70%';
+            menuOverlay.style.display = 'none';
+        });
+    
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerMenu.style.left = '-70%';
+                menuOverlay.style.display = 'none';
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+        hamburgerMenu.style.left = '-70%';
+        menuOverlay.style.display = 'none';
+        });
+    </script>
 
     <!-- Main Content -->
     <section id="banner">
         <div class="polygon-container">
-            <img class="polygon" src="icons/polygon.png" alt="">
+            <img class="polygon" src="icons/polygon.png" alt="Transport din Chișinău către Austria, pachete avantajoase de călătorie.">
         </div>
         <div class="content">
             <h1>transport pasageri și colete</h1>
@@ -111,7 +187,7 @@
             </div>
             <a href="tel:+37369665977" id="button">
                 <div class="icon">
-                    <img src="icons/telephone-color2.png" alt="Telephone Icon">
+                    <img src="icons/telephone-color2.png" alt="Telephone Icon Transport din Moldova catre Germania, calatorii confortabile si sigure.">
                 </div>
                 <span id="offer-nav">APELEAZĂ ACUM</span>
             </a>
@@ -132,26 +208,26 @@
         <div class="slideshow reveal-item mobile">
             <div class="slides">
                 <div class="slide slide-1">
-                    <img src="icons/offers/of1.jpg" alt="">
+                    <img src="icons/offers/of1.jpg" alt="	Microbuz Chisinau - Romania, solutia ideala pentru calatorii rapide.">
                 </div>
                 <div class="slide">
-                    <img src="icons/offers/of2.jpg" alt="">
+                    <img src="icons/offers/of2.jpg" alt="Transport Chisinau - Germania, servicii flexibile pentru pasageri.">
                 </div>
                 <div class="slide slide-3">
-                    <img src="icons/offers/of3.jpg" alt="">
+                    <img src="icons/offers/of3.jpg" alt="Servicii de transport cu microbuz din Moldova catre Austria, confort garantat.">
                 </div>
             </div>
         </div>
         <div class="slidesho desktop">
             <div class="slidesdesktop">
                 <div class="slidedesktop slide-1 active">
-                    <img src="icons/offers/of1.jpg" alt="">
+                    <img src="icons/offers/of1.jpg" alt="	Transport cu microbuz din Chisinau catre Germania, calatorii sigure si rapide.">
                 </div>
                 <div class="slidedesktop slide-2 active">
-                    <img src="icons/offers/of2.jpg" alt="">
+                    <img src="icons/offers/of2.jpg" alt="	Servicii de transport Chisinau - Ungaria, confort si preturi accesibile.">
                 </div>
                 <div class="slidedesktop slide-3 active">
-                    <img src="icons/offers/of3.jpg" alt="">
+                    <img src="icons/offers/of3.jpg" alt="Transport din Chisinau catre Austria, pachete avantajoase de calatorie.">
                 </div>
             </div>
         </div>
@@ -163,12 +239,12 @@
             <div class="form-rezervare">
                 <div class="form-group">
                     <input type="text" id="name" name="Nume" placeholder="Nume și Prenume" required>
-                    <img src="icons/avatar.png" alt="">
+                    <img src="icons/avatar.png" alt="Transport cu microbuz din Chisinau catre Ungaria, rapid si accesibil.">
                 </div>
             
                 <div class="form-group">
                     <input type="tel" id="phone" name="Telefon" placeholder="Număr De Telefon" required pattern="[\+]?[0-9]{10,15}" title="Numărul de telefon trebuie să includă minim 9 cifre, incepând cu +, fără spații">
-                    <img src="icons/phone-call.png" alt="">
+                    <img src="icons/phone-call.png" alt="	Calatorii sigure din Moldova catre Romania, servicii de transport moderne.">
                 </div>
 
                 <p class="comment2">Plecare</p>
@@ -183,11 +259,11 @@
                             <option value="România">Olanda</option>
                             <option value="România">Belgia</option>
                         </select>
-                        <img src="icons/location.png" alt="">
+                        <img src="icons/location.png" alt="Transport din Chisinau catre Germania, confort si siguranta pe traseu.">
                     </div>
                     <div class="form-group">
                         <input type="text" id="city" name="Plecare2" placeholder="Oraș" required>
-                        <img src="icons/location-2.png" alt="">
+                        <img src="icons/location-2.png" alt="	Microbuz Chisinau - Austria, cea mai buna optiune pentru calatorii economice.">
                     </div>
                 </div>
                 
@@ -199,11 +275,11 @@
                             <option value="Moldova">Moldova</option>
                             <option value="România">România</option>
                         </select>
-                        <img src="icons/location.png" alt="">
+                        <img src="icons/location.png" alt="Transport cu microbuz Chisinau - Moldova - Germania, rapid si convenabil.">
                     </div>
                     <div class="form-group">
                         <input type="text" id="city" name="Sosire2" placeholder="Oraș" required>
-                        <img src="icons/location-2.png" alt="">
+                        <img src="icons/location-2.png" alt="Calatorii internationale cu microbuz din Chisinau catre Ungaria si Austria.">
                     </div>
                 </div>
                 <!-- <div class="select-forms">
@@ -217,19 +293,19 @@
                     </div>
                 </div>
              -->
-                <button type="submit">Află Prețul<img src="icons/ticket.png" alt=""></button>
+                <button type="submit">Află Prețul<img src="icons/ticket.png" alt="Transport Chisinau - Romania, servicii flexibile si preturi avantajoase."></button>
             </form>
             </div>
     </section>
 
     <div class="shape shape2">
-        <img src="icons/shape-2.png" alt="">
+        <img src="icons/shape-2.png" alt="Calatorii internationale cu microbuz din Chisinau catre Ungaria si Austria.">
     </div>
 
     <!-- NUMBERS -->
     <section class="numbers">
         <div class="polygon-container">
-            <img class="polygon" src="icons/polygon.png" alt="">
+            <img class="polygon" src="icons/polygon.png" alt="Transport Chisinau - Romania, servicii flexibile si preturi avantajoase.">
         </div>
 
         <div class="title reveal-item">
@@ -252,15 +328,15 @@
         </div>
 
        <div class="images">
-        <img class="bus1" src="icons/bus/IMG_5837.PNG" alt="">
-        <img class="bus2" src="icons/bus/IMG_5838.PNG" alt="">
-        <img class="boxx1" src="icons/box.png" alt="">
-        <img class="boxx2" src="icons/box.png" alt="">
+        <img class="bus1" src="icons/bus/IMG_5837.PNG" alt="Microbuz din Moldova catre Germania, pachete de calatorie atractive.">
+        <img class="bus2" src="icons/bus/IMG_5838.PNG" alt="Calatorii sigure din Chisinau catre Austria si alte destinatii europene.">
+        <img class="boxx1" src="icons/box.png" alt="Transport microbuz Chisinau Germania">
+        <img class="boxx2" src="icons/box.png" alt="Microbuz Chisinau Austria">
        </div>
     </section>
 
     <div class="shape shape3">
-        <img src="icons/shape-1.png" alt="">
+        <img src="icons/shape-1.png" alt="Transport microbuz Chisinau Ungaria">
     </div>
 
        <!-- REVIEWS -->
@@ -275,10 +351,10 @@
             <div class="slides2">
                 <div class="slide2 slide-1">
                     <div class="shape-review">
-                        <img src="icons/Rectangle1.png" alt="">
+                        <img src="icons/Rectangle1.png" alt="Transport Chisinau Romania microbuz">
                     </div>
                     <div class="top-info">
-                        <img src="icons/quote.png" alt="">
+                        <img src="icons/quote.png" alt="Călătorii cu microbuz Chisinau">
                         <p>Aliona Chicu Bors</p>
                     </div>
                     <div class="description">
@@ -286,23 +362,23 @@
                     </div>
                     <div class="bottom-container">
                         <div class="ellipse">
-                            <img src="icons/Ellipse 1.jpg" class="icon" alt="">
+                            <img src="icons/Ellipse 1.jpg" class="icon" alt="Pachete transport microbuz Europa">
                         </div>
                         <div class="stars">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
+                            <img src="icons/star.png" alt="Pachete transport microbuz Europa">
+                            <img src="icons/star.png" alt="Microbuz Chisinau spre Germania">
+                            <img src="icons/star.png" alt="Transport rutieră Chisinau Germania">
+                            <img src="icons/star.png" alt="Transport rutieră Chisinau Ungaria">
+                            <img src="icons/star.png" alt="Transport rutieră Chisinau Austria">
                         </div>
                     </div>
                 </div>
                 <div class="slide2 slide-2">
                     <div class="shape-review">
-                        <img src="icons/Rectangle1.png" alt="">
+                        <img src="icons/Rectangle1.png" alt="Transport rutieră Chisinau Romania">
                     </div>
                     <div class="top-info">
-                        <img src="icons/quote.png" alt="">
+                        <img src="icons/quote.png" alt="Pachete transport rutieră Europa">
                         <p>Alexandra Alexandra</p>
                     </div>
                     <div class="description">
@@ -313,17 +389,17 @@
                             <img src="icons/Ellipse 2.jpg" class="icon" alt="">
                         </div>
                         <div class="stars">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
+                            <img src="icons/star.png" alt="Transport rapid rutieră Chisinau">
+                            <img src="icons/star.png" alt="Transport rutieră Chisinau Belgia">
+                            <img src="icons/star.png" alt="Transport rutieră Chisinau în Europa">
+                            <img src="icons/star.png" alt="Transport pasageri rutieră Chisinau">
+                            <img src="icons/star.png" alt="Transport rutieră Chisinau Moldova Germania">
                         </div>
                     </div>
                 </div>
                 <div class="slide2 slide-3">
                     <div class="shape-review">
-                        <img src="icons/Rectangle1.png" alt="">
+                        <img src="icons/Rectangle1.png" alt="Oferte transport rutieră Chisinau">
                     </div>
                     <div class="top-info">
                         <img src="icons/quote.png" alt="">
@@ -334,24 +410,24 @@
                     </div>
                     <div class="bottom-container">
                         <div class="ellipse">
-                            <img src="icons/Ellipse 3.jpg" class="icon" alt="">
+                            <img src="icons/Ellipse 3.jpg" class="icon" alt="Transport confortabil rutieră Chisinau">
                         </div>
                         <div class="stars">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
+                            <img src="icons/star.png" alt="Transport rutieră direct Chisinau Romania">
+                            <img src="icons/star.png" alt="Transport rutieră direct Chisinau Romania">
+                            <img src="icons/star.png" alt="Servicii transport rutieră Chisinau Austria">
+                            <img src="icons/star.png" alt="Transport ieftin rutieră Chisinau Germania">
+                            <img src="icons/star.png" alt="Transport rutieră Chisinau Germania ieftin">
                         </div>
                     </div>
                 </div>
 
                 <div class="slide2 slide-4">
                     <div class="shape-review">
-                        <img src="icons/Rectangle1.png" alt="">
+                        <img src="icons/Rectangle1.png" alt="Transport rutieră Chisinau Romania direct">
                     </div>
                     <div class="top-info">
-                        <img src="icons/quote.png" alt="">
+                        <img src="icons/quote.png" alt="Transport Chisinau Austria pachete">
                         <p>Elena Milena</p>
                     </div>
                     <div class="description">
@@ -359,24 +435,24 @@
                     </div>
                     <div class="bottom-container">
                         <div class="ellipse">
-                            <img src="icons/Ellipse 4.jpg" class="icon" alt="">
+                            <img src="icons/Ellipse 4.jpg" class="icon" alt="Călătorii rutieră Chisinau Europa">
                         </div>
                         <div class="stars">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
+                            <img src="icons/star.png" alt="Servicii transport rutieră Moldova">
+                            <img src="icons/star.png" alt="Microbuz Chisinau Germania transport ieftin">
+                            <img src="icons/star.png" alt="Călătorii rutieră Chisinau Belgia">
+                            <img src="icons/star.png" alt="Transport rapid rutieră Chisinau Ungaria">
+                            <img src="icons/star.png" alt="Călătorii Chisinau Austria ieftin">
                         </div>
                     </div>
                 </div>
 
                 <div class="slide2 slide-5">
                     <div class="shape-review">
-                        <img src="icons/Rectangle1.png" alt="">
+                        <img src="icons/Rectangle1.png" alt="Transport cu autocar din Chisinau">
                     </div>
                     <div class="top-info">
-                        <img src="icons/quote.png" alt="">
+                        <img src="icons/quote.png" alt="Transport rutieră Chisinau Polonia">
                         <p>Dan Ionita</p>
                     </div>
                     <div class="description">
@@ -384,14 +460,14 @@
                     </div>
                     <div class="bottom-container">
                         <div class="ellipse">
-                            <img src="icons/Ellipse 5.jpg" class="icon" alt="">
+                            <img src="icons/Ellipse 5.jpg" class="icon" alt="Servicii transport rutieră Chisinau direct Germania">
                         </div>
                         <div class="stars">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
-                            <img src="icons/star.png" alt="">
+                            <img src="icons/star.png" alt="Transport ieftin Chisinau Ungaria">
+                            <img src="icons/star.png" alt="Transport Chisinau Germania confortabil">
+                            <img src="icons/star.png" alt="Călătorii Chisinau spre Europa direct">
+                            <img src="icons/star.png" alt="Microbuz Chisinau spre Germania program fix">
+                            <img src="icons/star.png" alt="Transport Chisinau Belgia pachete ieftine">
                         </div>
                     </div>
                 </div>
@@ -557,8 +633,7 @@
         <div class="nav">
             <div class="navigation">
                 <a href="" class="first">Acasă</a> <span>|</span>
-                <a href="">Despre Noi</a> <span>|</span>
-                <a href="">Galerie</a> 
+                <a href="">Galerie</a> <span>|</span>
             </div>
         </div>
         <div class="credentials">

@@ -89,12 +89,6 @@ h1 {
     visibility: hidden;
 }
 
-/* .hidden {
-    opacity: 0;
-    visibility: hidden;
-    transition: visibility 0s 0.5s, opacity 0.5s linear;
-} */
-
 @keyframes moveButton {
     0% {
         transform: translateX(0);
@@ -289,10 +283,140 @@ h1 {
     padding: initial;
     animation: 1s logo-header-button cubic-bezier(0.25, 0.8, 0.25, 1);
     animation-delay: 1.4s;
+    cursor: pointer;
+    transition: .3s ease;
+}
+#logo-header button:hover {
+    scale: 1.05;
 }
 #logo-header button img {
     height: 30px;
     width: 40px;
+}
+#hamburger-menu {
+    font-family: 'Manrope';
+    font-weight: 400;
+    position: fixed;
+    top: 0;
+    left: -70%;
+    width: 70%;
+    height: 100%;
+    background-color: #1D232B;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+    z-index: 99999;
+    padding: 0 10%;
+    padding-top: 100px;
+}
+#hamburger-menu h1 {
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.217);
+    padding: 30px 0;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+#hamburger-menu img {
+    width: 25px;
+}
+
+#hamburger-menu .logo img {
+    width: 300px;
+    margin: 20px 0;
+    position: relative;
+    left: -15px;
+}
+
+#hamburger-menu .box{
+    color: #B4B4B4;
+    font-family: 'Manrope';
+}
+
+#hamburger-menu h5 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+#hamburger-menu a {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}
+#hamburger-menu .number div {
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+}
+#hamburger-menu .number div img {
+    margin-right: 10px;
+    width: 18px;
+    height: 18px;
+}
+#hamburger-menu .box2 {
+    margin: 20px 0 25px 0;
+} 
+#hamburger-menu .box2 .icons {
+    margin-top: 12px;
+    width: px;
+    display: flex;
+}
+#hamburger-menu .box2 .icons img {
+    width: 27px;
+}
+#hamburger-menu .nav {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+#hamburger-menu .nav a {
+    position: relative;
+    margin: 10px 0;
+    padding: 5px 0;
+    width: 25%;
+    transition: color .3s ease, background-color .3s ease;
+}
+
+#hamburger-menu .nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    height: 3px;
+    background-color: var(--bg-color-1);
+    transition: left .3s ease, right .3s ease;
+}
+
+#hamburger-menu .nav a:hover::after {
+    left: 0;
+    right: 0;
+}
+
+#hamburger-menu .icons a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Manrope';
+    padding: 0 8px;
+}
+#hamburger-menu .icons a:nth-child(1){
+    color: white;
+    text-decoration: none;
+    font-family: 'Manrope';
+    padding: 0;
+    padding-right: 8px;
+}
+#menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 99999;
 }
 
 #banner {
@@ -855,6 +979,7 @@ h1 {
     align-items: center;
     overflow: hidden;
     z-index: 9999;
+    position: relative;
     
     border-radius: 20px;
     background: linear-gradient(45deg, var(--bg-color-1) 0%, 
@@ -910,8 +1035,10 @@ h1 {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    position: relative;
-    bottom: 10px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 25px;
 }
 .slides2 img {
     width: 22px;
@@ -949,16 +1076,6 @@ h1 {
     z-index: 99;
 }
 
-.slide2 .bottom-container{
-    bottom: 20px;
-}
-.slide2.slide-3 .bottom-container,
-.slide2.slide-5 .bottom-container {
-    bottom: -36px;
-}
-.slide2.slide-4 .bottom-container {
-    bottom: -17px;
-}
 .slide2.slide-3 .description ,
     .slide2.slide-5 .description {
 
@@ -1372,9 +1489,19 @@ form.contact-form .form-group {
     #offers button {
         width: 65%;
     }
+    #hamburger-menu .box2 .icons img {
+        width: 26px;
+    }
+    #hamburger-menu .icons a {
+        padding: 0 7px;
+    }
 }
 
 @media screen and (max-width: 380px){
+    #hamburger-menu{
+        padding: 0 5%;
+        padding-top: 100px;
+    }
     #button {
         margin-top: 15px;
         display: flex;
@@ -1383,6 +1510,12 @@ form.contact-form .form-group {
         width: 70%;
     }
     
+    #hamburger-menu .box2 .icons img {
+        width: 25px;
+    }
+    #hamburger-menu .icons a {
+        padding: 0 5px;
+    }
 
     .slideshow {
         height: 300px; 
@@ -1516,12 +1649,6 @@ form.contact-form .form-group {
     .slideshow {
         height: 370px;
     }
-    .slide2.slide-2 .bottom-container {
-        bottom: 1px;
-    }
-    .slide2.slide-4 .bottom-container {
-        bottom: -37px;
-    }
     #contact {
         bottom: 1100px;
     }
@@ -1631,9 +1758,6 @@ form.contact-form .form-group {
 
 @media screen and (min-width: 636px)
 {
-    .slide2.slide-1 .bottom-container {
-        bottom: 0;
-    }
     .numbers {
         bottom: 700px;
     }
@@ -1943,10 +2067,11 @@ form.contact-form .form-group {
         width: 58%;
     }
     .polygon {
-        width: 80%;
+        width: 60%;
     }
-    .polygon-container {
-        left: 30%;
+    .numbers .polygon-container {
+        left: 0;
+        top: 0;
     }
 }
 @media screen and (min-width: 1050px) {
@@ -1962,6 +2087,9 @@ form.contact-form .form-group {
     
 }
 @media screen and (min-width: 1000px) {
+    .slide2 .bottom-container {
+        bottom: 40px;
+    }
     #logo-header img.logo {
         width: 40%;
     }
@@ -2078,12 +2206,6 @@ form.contact-form .form-group {
     #contact {
         padding: 100px 60px 0 60px;
     }
-    .slide2.slide-3 .bottom-container, .slide2.slide-5 .bottom-container {
-        bottom: -67px;
-    }
-    .slide2.slide-4 .bottom-container {
-        bottom: -72px;
-    }
     .slide2 .top-info {
         font-size: 16px;
     }
@@ -2109,8 +2231,9 @@ form.contact-form .form-group {
         padding: 5px 60px;
     }
     #contact .polygon {
-        width: 100%;
-        left:40%;
+        width: 65%;
+        top: -10%;
+        left: 40%;
     }
 }
 @media screen and (min-width: 1100px)
@@ -2168,7 +2291,9 @@ form.contact-form .form-group {
     .numbers .content .box p {
         font-size: 20px;
     }
-    
+    .slides2 {
+        width: 35%;
+    }
 }
 
 @media screen and (min-width: 1700px) {
@@ -2183,9 +2308,7 @@ form.contact-form .form-group {
     #banner h1 {
         width: 38%;
     }
-    .slides2 {
-        width: 35%;
-    }
+    
     .slidesdesktop {
         padding: 0 350px;
     }
