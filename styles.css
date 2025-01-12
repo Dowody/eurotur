@@ -1473,12 +1473,6 @@ form.contact-form .form-group {
     .slide2.slide-5 .description {
         top: 30px;
     }
-    .slide2.slide-5 .bottom-container {
-        bottom: -56px;
-    }
-    .slide2.slide-4 .bottom-container {
-        bottom: -36px;
-    }
     
     #footer .credentials {
         font-size: 13px;
@@ -1523,12 +1517,6 @@ form.contact-form .form-group {
     
     .slideshow2 {
         height: 345px;    
-    }
-    .slide2.slide-5 .bottom-container {
-        bottom: -56px;
-    }
-    .slide2.slide-4 .bottom-container {
-        bottom: -36px;
     }
     .shape5 {
         bottom: 808px;
