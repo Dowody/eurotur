@@ -1358,7 +1358,7 @@ form.contact-form .form-group {
 /* FOOTER */
 
 #footer {
-    height: 580px;
+    height: 650px;
     width: 100%;
     background-color: #1D232B;
     position: relative;
@@ -1448,6 +1448,19 @@ form.contact-form .form-group {
 #footer .nav span {
     color: rgba(255, 255, 255, 0.263);
 }
+.developed {
+    font-family: 'Manrope';
+    color: white;
+    font-size: 14px;
+}
+#footer .developed a {
+    color: #0062FF;
+    font-weight: 800;
+}
+
+
+
+
 body.galerie .shape {
     bottom: 800px;
     z-index: 99;
@@ -1521,8 +1534,8 @@ body.galerie #destinations .title
     z-index: 1001;
     background-color: #191a1b87;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1575,9 +1588,19 @@ body.galerie #destinations .title
     #hamburger-menu .icons a {
         padding: 0 7px;
     }
+    body.galerie .shape {
+        bottom: 840px;
+        z-index: 99;
+    }
+    .gallery-item {
+        max-width: 300px;
+    }
 }
 
 @media screen and (max-width: 380px){
+    #nav a {
+        font-size: 14px;
+    }
     #hamburger-menu{
         padding: 0 5%;
         padding-top: 100px;
@@ -1828,6 +1851,13 @@ body.galerie #destinations .title
     #banner #button {
         width: 40%;
     }
+    body.galerie #destinations{
+        padding: 0;
+        padding-top: 1100px;
+        padding-bottom: 0px;
+        height: auto;
+    }
+    
 }
 
 @media screen and (min-width: 636px)
@@ -1841,6 +1871,9 @@ body.galerie #destinations .title
     }
     .shape3 {
         bottom: 940px;
+    }
+    .gallery-item {
+        max-width: 300px;
     }
 }
 
@@ -1875,8 +1908,13 @@ body.galerie #destinations .title
     }
     body.galerie #destinations{
         padding: 0;
-        padding-top: 1000px;
+        padding-top: 1250px;
+        padding-bottom: 0px;
         height: auto;
+    }
+    body.galerie .shape {
+        bottom: 1000px;
+        z-index: 99;
     }
     .shape5 {
         bottom: 1000px;
@@ -1892,6 +1930,9 @@ body.galerie #destinations .title
     }
     .slides {
         width: 70%;
+    }
+    .gallery {
+        gap: 20px;
     }
 }
 
@@ -1936,6 +1977,16 @@ body.galerie #destinations .title
     }
     #footer {
         bottom: 1700px;
+    }
+    body.galerie #destinations{
+        padding: 0;
+        padding-top: 1450px;
+        padding-bottom: 0px;
+        height: auto;
+    }
+    body.galerie .shape {
+        bottom: 1160px;
+        z-index: 99;
     }
 }
 
@@ -2069,10 +2120,27 @@ body.galerie #destinations .title
     .slidedesktop img {
         height: 100%;
     }
+    body.galerie #destinations{
+        padding: 0;
+        padding-top: 1450px;
+        padding-bottom: 0px;
+        height: auto;
+    }
+    body.galerie .shape {
+        bottom: 1200px;
+        z-index: 99;
+    }
+    .gallery-item {
+        max-width: 300px;
+    }
 } 
 @media screen and (min-width: 845px ) {
     .slidedesktop {
         height: 265px;
+    }
+    body.galerie .shape {
+        bottom: 1200px;
+        z-index: 99;
     }
 }
 @media screen and (min-width: 920px ) {
@@ -2081,6 +2149,10 @@ body.galerie #destinations .title
     }
     #contact {
         bottom: 1600px;
+    }
+    body.galerie .shape {
+        bottom: 1250px;
+        z-index: 99;
     }
 }
 @media screen and (min-width: 980px) {
@@ -2329,6 +2401,26 @@ body.galerie #destinations .title
         top: -10%;
         left: 40%;
     }
+    body.galerie #destinations{
+        padding: 0;
+        padding-top: 1450px;
+        padding-bottom: 0px;
+        height: auto;
+    }
+    body.galerie .shape {
+        bottom: 1250px;
+        z-index: 99;
+    }
+    .lightbox-content {
+        max-width: 60%;
+        max-height: 60%;
+    }
+    .arrow {
+        background-color: #2C2E30;
+    }
+    .gallery-item {
+        max-width: 300px;
+    }
 }
 @media screen and (min-width: 1100px)
 {
@@ -2393,6 +2485,17 @@ body.galerie #destinations .title
     .slides2 {
         width: 35%;
     }
+    body.galerie #destinations{
+        padding: 0;
+        padding-top: 1450px;
+        padding-bottom: 0px;
+        height: auto;
+    }
+    body.galerie .shape {
+        bottom: 1250px;
+        z-index: 99;
+    }
+
 }
 
 @media screen and (min-width: 1700px) {
@@ -2405,7 +2508,7 @@ body.galerie #destinations .title
     }
     
     #banner h1 {
-        width: 38%;
+        width: 45%;
     }
     
     .slidesdesktop {
