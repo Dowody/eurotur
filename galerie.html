@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euro Tur</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="icons/LOGO-E.png" type="image/png">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init({
+              publicKey: "dzg9QgcYe_UR0YLvb",
+            });
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_qt9urtk', 'template_q6z9xbg', this)
+                    .then(() => {
+                        alert('Mesajul a fost expediat cu succes. Vă vom contacta în curând!');
+                    }, (error) => {
+                        alert('Mesajul nu a putut fi expediat. Vă rugăm să încercați mai târziu sau apelați la +373 69 665 977!');
+                    });
+            });
+
+            document.getElementById('reservation-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_qt9urtk', 'template_vuww4sj', this)
+                    .then(() => {
+                        alert('Am primit mesajul dvs. Vă vom contacta în curând!');
+                    }, (error) => {
+                        alert('Vă rugăm să încercați mai târziu sau apelați la +373 69 665 977!');
+                    });
+            });
+        }
+    </script>
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3ZT5SBQZB5"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-3ZT5SBQZB5');
+    </script>
+</head>
+
+<!-- <div id="preloader">
+    <div class="spinner"></div>
+</div> -->
+
+<body class="galerie">
+    
+    <div class="hot-offers">
+        <a href="index.html#offer-nav">
+            <button>🔥 Oferte Fierbinți</button>
+        </a>
+    </div>
+    <!-- Nav -->
+    <section id="nav">
+        <div class="phone">
+            <img src="icons/telephone.png" alt="Transport rapid cu microbuz către Germania, servicii confortabile pentru călătorii sigure.">
+            <a href="tel:+37369665977">+373 69 665 977</a>
+        </div>
+        <div class="social">
+            <a href="https://wa.me/+37369665977" target="_blank">
+                <img src="icons/whatsapp.webp" alt="WhatsApp Transport rapid cu microbuz către Germania, servicii confortabile pentru călătorii sigure.">
+            </a>
+            <a href="https://t.me/+37369665977" target="_blank">
+                <img src="icons/telegram.png" alt="Telegram Transport rapid cu microbuz către Germania, servicii confortabile pentru călătorii sigure.">
+            </a>
+            <a href="https://m.me/sv.trans" target="_blank">
+                <img src="icons/messenger.png" alt="Messenger Transport rapid cu microbuz către Germania, servicii confortabile pentru călătorii sigure.">
+            </a>
+        </div>
+    </section>
+    <div id="menu-overlay"></div>
+    <div class="top-nav">
+        <section id="logo-header">
+            <a href="index.html">
+                <img class="logo" src="icons/logo2.png" alt="Transport cu microbuz din Chișinău către Germania, călătorii sigure și rapide.">
+            </a>
+            <button type="submit" id="menu-button">
+                <img src="icons/menu.png" alt="Servicii de transport Chișinău - Ungaria, confort și prețuri accesibile.">
+            </button>
+            <div class="anav">
+                <a href="index.html" class="active">Acasă</a>
+                <a href="galerie.html">Galerie</a>
+                <a href="#footer" class="galerie">Contact</a>
+            </div>
+        </section>
+        <div id="scroll-status-bar"></div>
+    </div>
+    <nav id="hamburger-menu">
+        <h1>Meniu</h1>
+        <div class="nav">
+            <a href="index.html">Acasă</a>
+            <a href="galerie.html">Galerie</a>
+            <a href="#footer">Contact</a>
+        </div>
+
+        <div class="box1 box">
+            <h5>Contacteaza-ne la:</h5>
+            <div class="number">
+                <div>
+                    <img src="icons/telephone.png" alt="">
+                    <a href="tel:+37369665977">+373 69 665 977</a>
+                </div>
+                <div>
+                    <img src="icons/telephone.png" alt="">
+                    <a href="tel:+37369665977">+373 69 665 977</a>
+                </div>
+            </div>
+        </div>
+        <div class="box2 box">
+            <h5>Sau scrie-ne un mesaj:</h5>
+            <div class="icons">
+                <a href="https://www.instagram.com/eurotur.transport/" target="_blank">
+                    <img src="icons/instagram.png" alt="Instagran">
+                </a>
+                <a href="viber://chat?number=+37369665977" target="_blank">
+                    <img src="icons/viber.png" alt="Viber">
+                </a>
+                <a href="https://wa.me/+37369665977" target="_blank">
+                    <img src="icons/whatsapp.webp" alt="WhatsApp">
+                </a>
+                <a href="https://t.me/+37369665977" target="_blank">
+                    <img src="icons/telegram.png" alt="Telegram">
+                </a>
+                <a href="https://m.me/sv.trans" target="_blank">
+                    <img src="icons/messenger.png" alt="Messenger">
+                </a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        const menuButton = document.getElementById('menu-button');
+        const hamburgerMenu = document.getElementById('hamburger-menu');
+        const menuOverlay = document.getElementById('menu-overlay');
+        const navLinks = document.querySelectorAll('#hamburger-menu .nav a');
+    
+        menuButton.addEventListener('click', () => {
+            if (hamburgerMenu.style.left === '0%') {
+                hamburgerMenu.style.left = '-70%';
+                menuOverlay.style.display = 'none';
+            } else {
+                hamburgerMenu.style.left = '0';
+                menuOverlay.style.display = 'block';
+            }
+        });
+    
+        menuOverlay.addEventListener('click', () => {
+            hamburgerMenu.style.left = '-70%';
+            menuOverlay.style.display = 'none';
+        });
+    
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerMenu.style.left = '-70%';
+                menuOverlay.style.display = 'none';
+            });
+        });
+
+        window.addEventListener('scroll', () => {
+        hamburgerMenu.style.left = '-70%';
+        menuOverlay.style.display = 'none';
+        });
+    </script>
+
+    <!-- Gallery -->
+    <section id="destinations">
+        <div class="title reveal-item">
+            <span>📸</span>
+            <h1>Galerie</h1>
+        </div>
+        <div class="gallery">
+            <img src="icons/offers/of1.jpg" alt="Image 1" class="gallery-item">
+            <img src="icons/offers/of2.jpg" alt="Image 2" class="gallery-item">
+            <img src="icons/offers/of3.jpg" alt="Image 3" class="gallery-item">
+            <img src="icons/offers/of1.jpg" alt="Image 1" class="gallery-item">
+            <img src="icons/offers/of2.jpg" alt="Image 2" class="gallery-item">
+            <img src="icons/offers/of3.jpg" alt="Image 3" class="gallery-item">
+            <img src="icons/offers/of1.jpg" alt="Image 1" class="gallery-item">
+            <img src="icons/offers/of2.jpg" alt="Image 2" class="gallery-item">
+            <img src="icons/offers/of3.jpg" alt="Image 3" class="gallery-item">
+        </div>
+        <div id="lightbox" class="lightbox">
+            <span class="close">&times;</span>
+            <button class="arrow left-arrow">&lt;</button>
+            <img class="lightbox-content" id="lightbox-img">
+            <button class="arrow right-arrow">&gt;</button>
+        </div>
+    </section>
+    
+    <script>
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const closeBtn = document.querySelector('.close');
+        const leftArrow = document.querySelector('.left-arrow');
+        const rightArrow = document.querySelector('.right-arrow');
+    
+        let currentIndex = 0;
+    
+        const updateLightboxImage = (index) => {
+            lightboxImg.src = galleryItems[index].src;
+        };
+    
+        galleryItems.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                currentIndex = index;
+                updateLightboxImage(currentIndex);
+                lightbox.style.display = 'flex';
+            });
+        });
+    
+        closeBtn.addEventListener('click', () => {
+            lightbox.style.display = 'none';
+        });
+    
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                lightbox.style.display = 'none';
+            }
+        });
+    
+        leftArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+            updateLightboxImage(currentIndex);
+        });
+    
+        rightArrow.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % galleryItems.length;
+            updateLightboxImage(currentIndex);
+        });
+    
+        document.addEventListener('keydown', (e) => {
+            if (lightbox.style.display === 'flex') {
+                if (e.key === 'ArrowLeft') {
+                    currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+                    updateLightboxImage(currentIndex);
+                } else if (e.key === 'ArrowRight') {
+                    currentIndex = (currentIndex + 1) % galleryItems.length;
+                    updateLightboxImage(currentIndex);
+                } else if (e.key === 'Escape') {
+                    lightbox.style.display = 'none';
+                }
+            }
+        });
+    </script>
+
+    <div class="shape shape6">
+        <img src="icons/shape-2.png" alt="">
+    </div>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="polygon-container">
+            <img class="polygon" src="icons/polygon.png" alt="">
+        </div>
+
+        <div class="title reveal-item">
+            <h1>Ai Întrebări? Lasă-ne un mesaj acum!</h1>
+            <p>Răspundem în cel mai scurt timp!</p>
+        </div>
+
+            <form id="contact-form" method="POST" class="contact-form reveal-item">
+
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Nume și Prenume" required>
+                <img src="icons/avatar.png" alt="">
+            </div>
+        
+            <div class="form-group">
+                <input type="tel" id="phone" name="phone" placeholder="Număr De Telefon" required pattern="[\+]?[0-9]{10,15}" title="Numărul de telefon trebuie să includă minim 9 cifre, incepând cu +">
+                <img src="icons/phone-call.png" alt="">
+            </div>
+        
+            <div class="form-group group3">
+                <textarea id="message" name="message" rows="5" placeholder="Scrie Mesajul Tău" required></textarea>
+                <img src="icons/bubble-chat.png" alt="">
+            </div>
+        
+            <button type="submit">Expediaza Mesaj <img src="icons/send.png" alt=""></button>
+        </form>
+    </section>
+
+    <section id="footer">
+        
+        <div class="logo">
+            <img src="icons/logo2.png" alt="">
+        </div>
+        <div class="box1 box">
+            <h5>Contacteaza-ne la:</h5>
+            <div class="number">
+                <div>
+                    <img src="icons/telephone.png" alt="">
+                    <a href="tel:+37369665977">+373 69 665 977</a>
+                </div>
+                <div>
+                    <img src="icons/telephone.png" alt="">
+                    <a href="tel:+37369665977">+373 69 665 977</a>
+                </div>
+            </div>
+        </div>
+        <div class="box2 box">
+            <h5>Sau scrie-ne un mesaj:</h5>
+            <div class="icons">
+                <a href="https://www.instagram.com/eurotur.transport/" target="_blank">
+                    <img src="icons/instagram.png" alt="Instagran">
+                </a>
+                <a href="viber://chat?number=+37369665977" target="_blank">
+                    <img src="icons/viber.png" alt="Viber">
+                </a>
+                <a href="https://wa.me/+37369665977" target="_blank">
+                    <img src="icons/whatsapp.webp" alt="WhatsApp">
+                </a>
+                <a href="https://t.me/+37369665977" target="_blank">
+                    <img src="icons/telegram.png" alt="Telegram">
+                </a>
+                <a href="https://m.me/sv.trans" target="_blank">
+                    <img src="icons/messenger.png" alt="Messenger">
+                </a>
+            </div>
+        </div>
+        <div class="nav">
+            <div class="navigation">
+                <a href="index.html" class="first">Acasă</a> <span>|</span>
+                <a href="galerie.html">Galerie</a> <span>|</span>
+            </div>
+        </div>
+        <div class="credentials">
+            <span>©</span> 2025 Euro Tour <span class="bar"> | </span> Toate drepturile sunt rezervate.
+        </div>
+    </section>
+
+
+
+   
+    <script src="script.js"></script>
+</body>
+</html>
