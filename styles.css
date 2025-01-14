@@ -1504,7 +1504,7 @@ body.galerie #destinations .title
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 999999;
 }
 
 .lightbox-content {
