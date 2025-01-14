@@ -308,7 +308,7 @@ h1 {
     transition: left 0.3s ease-in-out;
     z-index: 99999;
     padding: 0 10%;
-    padding-top: 100px;
+    padding-top: 80px;
 }
 #hamburger-menu h1 {
     color: white;
@@ -1489,9 +1489,11 @@ body.galerie #destinations .title
     cursor: pointer;
     transition: transform 0.3s ease;
 }
+.gallery-item.img1 {
+}
 
 .gallery-item:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .lightbox {
