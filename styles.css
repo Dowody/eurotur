@@ -15,6 +15,10 @@ html, body {
 
 h1 {
     color: #191a1b;
+    font-family: 'Bebas Neue', sans-serif;
+}
+p {
+    font-family: 'Manrope', sans-serif;
 }
 
 :root {
@@ -317,6 +321,7 @@ h1 {
     padding: 30px 0;
     margin-bottom: 30px;
     text-transform: uppercase;
+    font-family: 'Manrope';
     font-size: 20px;
 }
 #hamburger-menu img {

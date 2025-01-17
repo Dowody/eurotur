@@ -5,26 +5,6 @@ setTimeout(() => {
     preloader.classList.add('fadeOut');
 }, 1500); 
 
-
-// window.addEventListener('load', () => {
-//     const preloader = document.getElementById('preloader');
-//     preloader.classList.add('fadeOut');
-//     setTimeout(() => {
-//         preloader.style.display = 'none';
-//         let preloadImages = document.querySelectorAll('.preload-excluded');
-//         preloadImages.forEach(function(image) {
-//             image.style.visibility = 'visible';
-//         });
-//     }, 1000);   
-// });
-
-
-
-
-
-
-
-
 const nav = document.querySelector(".top-nav");
 let lastScrollY = window.scrollY; 
 
@@ -185,7 +165,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let autoSlideIntervalOffers;
 
     function changeSlideOffers(direction) {
-        // Prevent change if we're already at the start or the end
         if (direction === -1 && currentSlide === 0) return; // If we're at the first slide and trying to go left
         if (direction === 1 && currentSlide === totalSlides - 1) return; // If we're at the last slide and trying to go right
 
