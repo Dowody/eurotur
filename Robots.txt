@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://eurotourmoldova.md/sitemap.xml
+Sitemap: http://eurotourmoldova.md/sitemap.xml
