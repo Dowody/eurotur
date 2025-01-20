@@ -315,7 +315,7 @@ p {
     padding: 0 10%;
     padding-top: 80px;
 }
-#hamburger-menu h1 {
+#hamburger-menu h2 {
     color: white;
     border-bottom: 1px solid rgba(255, 255, 255, 0.217);
     padding: 30px 0;
@@ -584,7 +584,7 @@ p {
     opacity: 1;
 }
 
-#destinations .title h1 {
+#destinations .title h2 {
     font-weight: 200;
     font-size: 30px;
 }
@@ -728,7 +728,7 @@ p {
 .numbers .title {
     margin-bottom: 10px;
 }
-.numbers .title h1 {
+.numbers .title h2 {
     font-weight: 400;
     padding-top: 50px;
     font-size: 70px;
@@ -820,7 +820,7 @@ p {
     animation-delay: 3s;
 }
 
-#offers .title h1 {
+#offers .title h2 {
     font-weight: 200;
     font-size: 30px;
 }
@@ -949,7 +949,7 @@ p {
     animation-delay: 1s;
 }
 
-#reviews .title h1 {
+#reviews .title h2 {
     font-weight: 200;
     font-size: 30px;
 }
@@ -1147,7 +1147,7 @@ p {
     animation: none;
     transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
-#contact .title h1 {
+#contact .title h2 {
     font-weight: 400;
     padding-top: 50px;
     font-size: 70px;
@@ -1323,7 +1323,7 @@ form.contact-form .form-group {
     resize: none;
 }
 
-#offers .form-title h1 {
+#offers .form-title h2 {
     font-weight: 400;
     font-size: 30px;
     text-align: center;
@@ -1645,7 +1645,7 @@ body.galerie #destinations .title
     #footer .nav a {
         font-size: 13px;
     }
-    #contact .title h1 {
+    #contact .title h2 {
         font-weight: 400;
         padding-top: 50px;
         font-size: 70px;
@@ -1685,7 +1685,7 @@ body.galerie #destinations .title
     .slide2 .description {
         padding: 25px 15px;
     }
-    .numbers .title h1 {
+    .numbers .title h2 {
         width: 100%;
     }
     #reviews {
@@ -1697,7 +1697,7 @@ body.galerie #destinations .title
     .shape5 {
         bottom: 830px;
     }
-    #contact .title h1 {
+    #contact .title h2 {
         font-size: 65px;
     }
     #footer .nav a {
@@ -1710,7 +1710,7 @@ body.galerie #destinations .title
     .numbers {
         bottom: 580px;
     }
-    .numbers .title h1 {
+    .numbers .title h2 {
         width: 70%;
     }
     .slide2 .description {
@@ -1734,10 +1734,10 @@ body.galerie #destinations .title
     .numbers {
         bottom: 600px;
     }
-    .numbers .title h1 {
+    .numbers .title h2 {
         width: 60%;
     }
-    #contact .title h1 {
+    #contact .title h2 {
         padding-top: 100px;
         width: 80%;
     }
@@ -1747,7 +1747,7 @@ body.galerie #destinations .title
     .numbers {
         bottom: 630px;
     }
-    .numbers .title h1 {
+    .numbers .title h2 {
         width: 60%;
         padding-top: 100px;
     }
@@ -1758,7 +1758,7 @@ body.galerie #destinations .title
         bottom: 1100px;
     }
 
-    #contact .title h1 {
+    #contact .title h2 {
         padding-top: 100px;
         width: 70%;
     }
@@ -1773,7 +1773,7 @@ body.galerie #destinations .title
         bottom: 805px;
 
     }
-    .numbers .title h1 {
+    .numbers .title h2 {
         width: 55%;
         padding-top: 100px;
     }
@@ -1812,7 +1812,7 @@ body.galerie #destinations .title
     .numbers {
         bottom: 680px;
     }
-    .numbers .title h1 {
+    .numbers .title h2 {
         width: 55%;
         padding-top: 125px;
     }
@@ -1822,7 +1822,7 @@ body.galerie #destinations .title
     #contact {
         bottom: 1150px;
     }
-    #contact .title h1 {
+    #contact .title h2 {
         padding-top: 100px;
         width: 60%;
     }
@@ -1873,7 +1873,7 @@ body.galerie #destinations .title
     .numbers {
         bottom: 700px;
     }
-    .numbers .title h1 {
+    .numbers .title h2 {
         width: 55%;
         padding-top: 125px;
     }
@@ -2052,7 +2052,7 @@ body.galerie #destinations .title
     .numbers .title{
         margin-top: 40px;
     }
-    .numbers .title h1 {
+    .numbers .title h2 {
         width: 100%;
     }
     .numbers .images .bus1 {
@@ -2287,7 +2287,7 @@ body.galerie #destinations .title
     #banner #button {
         width: 30%;
     }
-    #offers .title h1 {
+    #offers .title h2 {
         font-size: 40px;
     }
     #offers {
@@ -2297,7 +2297,7 @@ body.galerie #destinations .title
     .form-rezervare {
         padding: 0 60px;
     }
-    #offers .form-title h1 {
+    #offers .form-title h2 {
         font-size: 40px;
     }
     #offers .comment {
@@ -2317,7 +2317,7 @@ body.galerie #destinations .title
         padding: 70px 60px 0 60px;
         height: 840px;
     }
-    .numbers .title h1 {
+    .numbers .title h2 {
         font-size: 80px;
         padding-top: 80px;
     }
@@ -2349,17 +2349,17 @@ body.galerie #destinations .title
     #contact {
         bottom: 1700px;
     }
-    #reviews .title h1 {
+    #reviews .title h2 {
         font-size: 40px;
     }
-    #destinations .title h1{
+    #destinations .title h2{
         font-size: 40px;
     }
     .slide2 .description {
         font-size: 17px;
         padding: 25px 55px;
     }
-    #contact .title h1 {
+    #contact .title h2 {
         font-size: 90px;
         line-height: 100px;
         width: 60%;
@@ -2528,7 +2528,7 @@ body.galerie #destinations .title
     #contact {
         padding: 100px 140px;
     }
-    #contact .title h1 {
+    #contact .title h2 {
         width: 40%;
     }
     #contact .title p {
