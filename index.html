@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="icons/favicon.ico" type="image/x-icon">  
     
-    // 10.0
+    // 10.1
 
     <script type="application/ld+json">
         {
@@ -23,7 +23,8 @@
             "addressLocality": "Chișinău",
             "addressCountry": "MD"
           },
-          "description": "Transport rapid cu microbuz din Chișinău către Germania. Servicii sigure pentru pasageri și colete."
+          "description": "Transport rapid cu microbuz din Chișinău către Germania. Servicii sigure pentru pasageri și colete.",
+          "image": "https://eurotourmoldova.md/icons/gallery/3.jpg"
         }
     </script>
 
@@ -31,7 +32,7 @@
     <script type="text/javascript">
         (function() {
             emailjs.init({
-              publicKey: "dzg9QgcYe_UR0YLvb",
+              publicKey: "oCjVyjgfcer63chFp",
             });
         })();
     </script>
@@ -39,7 +40,7 @@
         window.onload = function() {
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-                emailjs.sendForm('service_qt9urtk', 'template_q6z9xbg', this)
+                emailjs.sendForm('service_1dfipt9', 'template_s78eb6u', this)
                     .then(() => {
                         alert('Mesajul a fost expediat cu succes. Vă vom contacta în curând!');
                     }, (error) => {
@@ -49,7 +50,7 @@
 
             document.getElementById('reservation-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-                emailjs.sendForm('service_qt9urtk', 'template_vuww4sj', this)
+                emailjs.sendForm('service_1dfipt9', 'template_lxruiv6', this)
                     .then(() => {
                         alert('Am primit mesajul dvs. Vă vom contacta în curând!');
                     }, (error) => {
@@ -302,10 +303,14 @@
                 <p class="comment2">Destinație</p>
                 <div class="select-forms">
                     <div class="form-group md-ro">
-                        <select name="Sosire1" id="select-md-ro" required>
+                        <select name="Plecare1" id="select-md-ro" required>
                             <option class="invisible" value="" disabled selected hidden>Țară</option>
                             <option value="Moldova">Moldova</option>
                             <option value="România">România</option>
+                            <option value="România">Austria</option>
+                            <option value="România">Germania</option>
+                            <option value="România">Olanda</option>
+                            <option value="România">Belgia</option>
                         </select>
                         <img src="icons/location.png" alt="Transport cu microbuz Chisinau - Moldova - Germania, rapid si convenabil.">
                     </div>

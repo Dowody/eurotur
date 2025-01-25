@@ -10,7 +10,7 @@
 
 
     <script type="application/ld+json">
-        { 
+        {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "EuroTourMoldova",
@@ -21,14 +21,17 @@
             "addressLocality": "Chișinău",
             "addressCountry": "MD"
           },
-          "description": "Transport rapid cu microbuz din Chișinău către Germania. Servicii sigure pentru pasageri și colete."
+          "description": "Transport rapid cu microbuz din Chișinău către Germania. Servicii sigure pentru pasageri și colete.",
+          "image": "https://eurotourmoldova.md/icons/gallery/3.jpg"
         }
+    </script>
+
     </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
             emailjs.init({
-              publicKey: "dzg9QgcYe_UR0YLvb",
+              publicKey: "oCjVyjgfcer63chFp",
             });
         })();
     </script>
@@ -36,7 +39,7 @@
         window.onload = function() {
             document.getElementById('contact-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-                emailjs.sendForm('service_qt9urtk', 'template_q6z9xbg', this)
+                emailjs.sendForm('service_1dfipt9', 'template_s78eb6u', this)
                     .then(() => {
                         alert('Mesajul a fost expediat cu succes. Vă vom contacta în curând!');
                     }, (error) => {
@@ -46,7 +49,7 @@
 
             document.getElementById('reservation-form').addEventListener('submit', function(event) {
                 event.preventDefault();
-                emailjs.sendForm('service_qt9urtk', 'template_vuww4sj', this)
+                emailjs.sendForm('service_1dfipt9', 'template_lxruiv6', this)
                     .then(() => {
                         alert('Am primit mesajul dvs. Vă vom contacta în curând!');
                     }, (error) => {
